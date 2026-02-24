@@ -1,12 +1,19 @@
+/* this is the global stylesheet for the website, defining the overall look and feel of the site, 
+including typography, layout, and colors. It also includes styles for the header, navigation, 
+main content area, and footer, as well as specific classes for elements like cards and the sticky navigation bar. */
+
+/* NONE OF THESE CSS STYLERS MUST NOT BE CHANGED, AS THEY ARE ESSENTIAL FOR THE FUNCTIONALITY AND DESIGN OF THE WEBSITE. */
+
+/* contains the stylers for the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background: url("images/background.jpeg") center/cover no-repeat;
-
+  background: url("images/background.jpeg") center/cover no-repeat; /* this is the background image for the website, which is set to cover the entire viewport and remain fixed during scrolling. */
   background-attachment: fixed;
   color: #333;
 }
 
+/* handle the elements in the header  */
 header {
   display: flex;
   flex-direction: column;
@@ -24,10 +31,13 @@ header::before {
   pointer-events: none;
 }
 
+/* contains the stylers for the navigation bar */
 nav {
   width: 100%;
   margin-top: 20px;
 }
+
+/* handles the stylers for the navigation links as a whole in the header */
 
 header nav ul {
   display: flex;
@@ -43,6 +53,7 @@ header nav ul {
   -webkit-backdrop-filter: blur(8.5px);
 }
 
+/* contains the stylers for the each navigation link in the header */
 header nav a {
   font-family: 'Inter', sans-serif;
   font-size: large;
@@ -54,6 +65,7 @@ header nav a {
   transition: all 0.3s ease;
 }
 
+/* handles the stylers for the navigation links when hovered in the header  */
 header nav a:hover {
   background: rgba(255, 255, 255, 0.26);
   border-radius: 16px;
@@ -61,7 +73,12 @@ header nav a:hover {
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
 }
-
+/* 
+contains the stylers for the main content area of the website, 
+which includes a maximum width, centered layout, padding, 
+background color with transparency, border radius, and box shadow 
+for a modern and clean look. The text within the main content area 
+is styled for readability with appropriate line height and font size. */
 main {
   max-width: 1200px;
   margin: 40px auto;
@@ -80,6 +97,11 @@ main p {
   color: #1a1a1a;
 }
 
+/* contains the stylers for the footer of the website, which 
+includes centered text, padding, color, background with transparency, 
+backdrop blur effect, and rounded top corners for a visually appealing 
+and cohesive design. The links within the footer are styled for better 
+visibility and interactivity, with hover effects and visited/active states. */
 footer {
   text-align: center;
   padding: 40px 20px;
@@ -161,6 +183,7 @@ footer a:active {
   border-radius: 10px;
 }
 
+/* these stylers are for the sticky navigation bar that appears when the user scrolls down the page. */
 .sticky-nav {
   position: fixed;
   top: -100px;

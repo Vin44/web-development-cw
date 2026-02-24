@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <div class="logo-container">
+            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
                 <img src="images/logo.png" alt="Website Logo">
                 <h1 class="website-title">
                     <span class="life">LIFE</span>
@@ -20,7 +20,7 @@
                 </h1>
             </div>
             <nav>
-                <ul>
+                <ul> <!-- this is the navigation bar that appears at the top of the page -->
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="simulator.html">Action Impact Simulator</a></li>
@@ -32,7 +32,7 @@
             </nav>
         </header>
 
-        <div class="sticky-nav">
+        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
             <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
             <h2 class="sticky-title">
                 <span class="life">LIFE</span>
@@ -70,7 +70,9 @@
             <a href="validation.html">Validation</a>
         </footer>
 
-        <script>
+
+        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
+        <script> 
             const stickyNav = document.querySelector('.sticky-nav');
             const header = document.querySelector('header');
 
@@ -82,6 +84,7 @@
                 }
             });
         </script>
+
+
     </body>
-    
 </html>
