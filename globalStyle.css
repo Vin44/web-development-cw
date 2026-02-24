@@ -1,0 +1,226 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: url("images/background.jpeg") center/cover no-repeat;
+
+  background-attachment: fixed;
+  color: #333;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  color: white;
+  padding: 15px;
+  height: 400px;
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+nav {
+  width: 100%;
+  margin-top: 20px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 75px;
+  margin: 0;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}
+
+header nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 60px;
+  background: rgba(182, 205, 245, 0.60);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}
+
+main p {
+  margin-bottom: 25px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgb(197, 196, 196);
+  background: rgba(83, 116, 216, 0.3); 
+  backdrop-filter: blur(5px);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+footer a {
+  color: rgb(110, 156, 248);
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: rgb(7, 19, 42);
+}
+
+footer a:active {
+  color: #6b6969;
+  transform: scale(0.95);
+  display: inline-block;
+  transition: transform 0.1s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  height: 300px;
+  padding-left: 50px;
+}
+
+.website-title {
+  margin: 0;
+  color: white;
+  font-size: 80px;
+  padding-left: 50px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.life {
+  font-family: 'Inter', sans-serif;
+  font-weight: 250;
+}
+
+.below {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; 
+}
+
+.water {
+  font-family: 'Inter', sans-serif;
+  font-weight: 750; 
+}
+
+.active {
+  border-bottom: 4px solid #6e9cf8;
+}
+
+.active:hover {
+  border-bottom: 4px solid #6e9cf8;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background: rgba(1, 18, 70, 0.98);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  z-index: 1000;
+  transition: top 0.4s ease;
+  box-sizing: border-box;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  
+}
+
+.sticky-nav.visible {
+  top: 0;
+}
+
+.sticky-title {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+  padding-top: 20px;
+}
+
+.sticky-nav nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-nav nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.sticky-nav nav a:hover {
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}
+
+.sticky-logo {
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
