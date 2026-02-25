@@ -8,7 +8,7 @@ main content area, and footer, as well as specific classes for elements like car
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background: url("images/background.jpeg") center/cover no-repeat; /* this is the background image for the website, which is set to cover the entire viewport and remain fixed during scrolling. */
+  background: url("../images/background.jpeg") center/cover no-repeat; /* this is the background image for the website, which is set to cover the entire viewport and remain fixed during scrolling. */
   background-attachment: fixed;
   color: #333;
 }
