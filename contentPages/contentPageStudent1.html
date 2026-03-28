@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Life Below Water</title>
+        <link rel="stylesheet" href="../stylings/globalStyle.css">
+        <link rel="stylesheet" href="../stylings/contentPage/contentPageStudent1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="userProfile.html" class="profile-btn" title="User Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
+            </a>
+            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
+                <img src="../images/logo.png" alt="Website Logo">
+                <h1 class="website-title">
+                    <span class="life">LIFE</span>
+                    <span class="below">BELOW</span>
+                    <span class="water">WATER</span>
+                </h1>
+            </div>
+            <nav>
+                <ul> <!-- this is the navigation bar that appears at the top of the page -->
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../simulator.html">Action Impact Simulator</a></li>
+                    <li><a href="../feedback.html">Feedback</a></li>
+                    <li><a href="../teamPage.html">Our Team</a></li>
+                    <li><a href="../sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
+            <a href="../userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
+            </a>
+            <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
+            <h2 class="sticky-title">
+                <span class="life">LIFE</span>
+                <span class="below"> BELOW</span>
+                <span class="water"> WATER</span>
+            </h2>
+            <nav>
+                <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../simulator.html">Action Impact Simulator</a></li>
+                <li><a href="../feedback.html">Feedback</a></li>
+                <li><a href="../teamPage.html">Our Team</a></li>
+                <li><a href="../sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <section class="content-hero">
+                <h2>Content Page: Student 1</h2>
+            </section>
+            
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+            <p>Vinindu Wickramasinghe - 20244059</p>
+            <a href="../editor.html">Page Editor</a>
+            <a href="../validation.html">Validation</a>
+        </footer>
+
+
+        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
+        <script> 
+            const stickyNav = document.querySelector('.sticky-nav');
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > header.offsetHeight - 80) {
+                stickyNav.classList.add('visible');
+                } else {
+                stickyNav.classList.remove('visible');
+                }
+            });
+        </script>
+
+
+    </body>
+</html>
