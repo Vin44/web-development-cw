@@ -61,13 +61,25 @@
             font-weight: bold;
             color: #0077b6;
         }
+
+        .low-bg {
+            background: url("../images/low.jpg") center/cover no-repeat;
+        }
+
+        .medium-bg {
+            background: url("../images/medium.jpg") center/cover no-repeat;
+        }
+
+        .high-bg {
+            background: url("../images/high.jpg") center/cover no-repeat;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-       
+
         <a href="userProfile.html" class="profile-btn" title="User Profile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
                 <path
@@ -213,25 +225,23 @@
 
         function updateLevel() {
 
-            let level = "";
-            let bg = "";
+            document.body.classList.remove("low-bg", "medium-bg", "high-bg");
 
             if (total <= 5) {
-                level = "Low Impact";
-                bg = "url('images/low.jpg')";
+                levelEl.textContent = "Low Impact";
                 messageEl.textContent = "You need to take more actions to protect marine life.";
-            } else if (total <= 12) {
-                level = "Medium Impact";
-                bg = "url('images/medium.jpg')";
-                messageEl.textContent = "Good effort! Keep improving your impact.";
-            } else {
-                level = "High Impact";
-                bg = "url('images/high.jpg')";
-                messageEl.textContent = "Excellent! You are making a strong impact!";
-            }
+                document.body.classList.add("low-bg");
 
-            levelEl.textContent = level;
-            document.body.style.backgroundImage = bg;
+            } else if (total <= 12) {
+                levelEl.textContent = "Medium Impact";
+                messageEl.textContent = "Good effort! Keep improving your impact.";
+                document.body.classList.add("medium-bg");
+
+            } else {
+                levelEl.textContent = "High Impact";
+                messageEl.textContent = "Excellent! You are making a strong impact!";
+                document.body.classList.add("high-bg");
+            }
         }
 
     </script>
