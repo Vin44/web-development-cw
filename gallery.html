@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Life Below Water</title>
         <link rel="stylesheet" href="stylings/globalStyle.css">
+        <link rel="stylesheet" href="stylings/gallery.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -61,57 +62,54 @@
         </div>
 
         <main>
-            <!-- thopi huththala meke weda krnnone -->
-            <!-- git hub eken me code tika pull krganin mulinma -->
-            <!-- ita pacce ublge namin branches hadagena weda krhlla -->
-            <!-- main ekata kawadawath push krnna epa ehema krnnath ba mn hithe -->
-            <!-- ubl hadagatta branch eke task eken task ekata kadahan branches, remember 'ubalage branches walin kadaganne' -->
-            <!-- SARALAWAMA -> main branch eken kedila thiyenna oni branches hatharai  -->
-                <!-- main -> (vinindu, janindu, krishantha, yoosuf) -->
-                <!-- thama thamange branch walin task eken task ekata kadahan branches -->
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
+            <h1 class="gallery-title">Gallery</h1>
+            <section class="gallery">
+                <div class="gallery-grid">
+
+                    <!-- CARD 1 -->
+                    <div class="card-gallery" data-title="Ocean Creates Art" data-desc="Coral Reefs">
+                        <img src="images/gallery/gallery_image-coral.jpg" alt="coral reefs">
+                        <div class="overlay">Coral Reefs</div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="card-gallery" data-title="Keep The Ocean Clean" data-desc="Plastic Harms The Ocean">
+                        <img src="images/gallery/gallery_image_clean.jpeg" alt="cleaning ocean">
+                        <div class="overlay">Keep The Ocean Clean</div>
+                    </div>
+
+                    <div class="card-gallery" data-title="Performers of the Ocean" data-desc="house to the the one of the biggest entertainers.">
+                        <img src="images/gallery/gallery_image_dolphin.jpg" alt="Performers of The Ocean">
+                        <div class="overlay">Performers of the Ocean</div>
+                    </div>
+
+                    <div class="card-gallery" data-title="Predator of The Seven Seas" data-desc="The Great White Shark">
+                        <img src="images/gallery/gallery_image_shark.jpg" alt="predator">
+                        <div class="overlay">Predator</div>
+                    </div>
+
+                    <div class="card-gallery" data-title="The Place Where Sun Gets Swallowed" data-desc="Famous Eyesight">
+                        <img src="images/gallery/gallery_image_sunset.jpg" alt="famous eyesight">
+                        <div class="overlay">Famous Eyesight</div>
+                    </div>
+
+                    <div class="card-gallery" data-title="Ocean Itself Is Art" data-desc="Ocean Waves">
+                        <img src="images/gallery/gallery_image_waves.jpg" alt="waves">
+                        <div class="overlay">Ocean Waves</div>
+                    </div>
+
+                    <!-- Repeat until 6 cards -->
+                    
+                </div>
+            </section>
         </main>
+        <div class="modal" id="modal">
+            <div class="modal-content" id="modalContent">
+                <img id="modalImg" src="">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
 
         <footer>
             <p>&copy; 2024 Life Below Water. All rights reserved.</p>
@@ -131,6 +129,46 @@
                 stickyNav.classList.add('visible');
                 } else {
                 stickyNav.classList.remove('visible');
+                }
+            });
+        </script>
+
+        <script>
+            const cards = document.querySelectorAll('.card-gallery');
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalContent = document.getElementById('modalContent');
+
+            // HOVER (JS required by coursework)
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.classList.add('hovered');
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('hovered');
+                });
+
+                // CLICK → OPEN MODAL
+                card.addEventListener('click', () => {
+                    const img = card.querySelector('img').src;
+                    const title = card.dataset.title;
+                    const desc = card.dataset.desc;
+
+                    modalImg.src = img;
+                    modalTitle.textContent = title;
+                    modalDesc.textContent = desc;
+
+                    modal.classList.add('show');
+                });
+            });
+
+            // CLICK OUTSIDE → CLOSE
+            modal.addEventListener('click', (e) => {
+                if (!modalContent.contains(e.target)) {
+                    modal.classList.remove('show');
                 }
             });
         </script>
