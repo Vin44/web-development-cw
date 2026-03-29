@@ -31,7 +31,11 @@ main h1 {
     text-align: center;
     font-size: 2.4rem;
     margin-bottom: 25px;
-    color: #0b3d4a;
+    color: #ffffff;
+}
+
+main h2 {
+    color: #ffffff !important;
 }
 
 /* =======================
@@ -39,14 +43,51 @@ main h1 {
 ======================= */
 
 .content-nav {
+    margin: 15px 0 25px;
     text-align: center;
-    background: transparent;   /* remove box feel */
-    padding: 10px 0;           /* much smaller */
-    margin-bottom: 25px;
-    box-shadow: none;          /* remove elevation */
-    border: none;
-    font-size: 1px;
-    opacity: 1.85;             /* slightly muted */
+}
+
+.content-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content-nav li {
+    margin: 0;
+}
+
+.content-nav a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* subtle underline animation (modern touch like student 1 style) */
+.content-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #0077b6;
+    transition: 0.3s;
+}
+
+.content-nav a:hover::after {
+    width: 100%;
+}
+
+.content-nav a:hover {
+    color: #023e8a;
 }
 
 .content-nav h2 {
@@ -86,10 +127,10 @@ main h1 {
     color: #023e8a;
 }
 
-.content-nav {
+/* .content-nav {
     font-size: 0.85rem;
     opacity: 0.6;
-}
+} */
 
 /* =======================
    SECTIONS
@@ -98,7 +139,7 @@ main h1 {
 section {
     margin: 60px 0;
     padding: 20px;
-    background: #98defa;
+    background: #289bb81d;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
@@ -135,6 +176,7 @@ video {
 p {
     text-align: justify;
     font-size: 1rem;
+    color: #ffffff !important;
 }
 
 ul {
@@ -143,6 +185,7 @@ ul {
 
 li {
     margin-bottom: 8px;
+    color: #ffffff;
 }
 
 /* =======================
@@ -262,7 +305,6 @@ footer p {
         <h1>Protecting Life Below Water</h1>
 
         <nav class="content-nav">
-            <h2>Quick Navigation</h2>
             <ul>
                 <li><a href="#section1">Introduction</a></li>
                 <li><a href="#section2">Ocean Threats</a></li>
