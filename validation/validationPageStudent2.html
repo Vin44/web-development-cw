@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Life Below Water</title>
+        <link rel="stylesheet" href="stylings/globalStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
+                <img src="images/logo.png" alt="Website Logo">
+                <h1 class="website-title">
+                    <span class="life">LIFE</span>
+                    <span class="below">BELOW</span>
+                    <span class="water">WATER</span>
+                </h1>
+            </div>
+            <nav>
+                <ul> <!-- this is the navigation bar that appears at the top of the page -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="simulator.html">Action Impact Simulator</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="teamPage.html">Our Team</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
+            <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
+            <h2 class="sticky-title">
+                <span class="life">LIFE</span>
+                <span class="below"> BELOW</span>
+                <span class="water"> WATER</span>
+            </h2>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="simulator.html">Action Impact Simulator</a></li>
+                <li><a href="userProfile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="teamPage.html">Our Team</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <!-- thopi huththala meke weda krnnone -->
+            <!-- git hub eken me code tika pull krganin mulinma -->
+            <!-- ita pacce ublge namin branches hadagena weda krhlla -->
+            <!-- main ekata kawadawath push krnna epa ehema krnnath ba mn hithe -->
+            <!-- ubl hadagatta branch eke task eken task ekata kadahan branches, remember 'ubalage branches walin kadaganne' -->
+            <!-- SARALAWAMA -> main branch eken kedila thiyenna oni branches hatharai  -->
+                <!-- main -> (vinindu, janindu, krishantha, yoosuf) -->
+                <!-- thama thamange branch walin task eken task ekata kadahan branches -->
+            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
+                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
+                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
+                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
+                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
+                following website:
+            </p>
+            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
+                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
+                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
+                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
+                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
+                following website:
+            </p>
+            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
+                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
+                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
+                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
+                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
+                following website:
+            </p>
+            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
+                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
+                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
+                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
+                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
+                following website:
+            </p>
+            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
+                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
+                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
+                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
+                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
+                following website:
+            </p>
+            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
+                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
+                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
+                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
+                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
+                following website:
+            </p>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+            <p>Vinindu Wickramasinghe - 20244059</p>
+            <a href="editor.html">Page Editor</a>
+            <a href="validationPageStudent2.html">Validation</a>
+        </footer>
+
+
+        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
+        <script> 
+            const stickyNav = document.querySelector('.sticky-nav');
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > header.offsetHeight - 80) {
+                stickyNav.classList.add('visible');
+                } else {
+                stickyNav.classList.remove('visible');
+                }
+            });
+        </script>
+
+
+    </body>
+</html>
