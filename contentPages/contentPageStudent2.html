@@ -1,95 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Life Below Water</title>
-        <link rel="stylesheet" href="../stylings/globalStyle.css">
-        <link rel="stylesheet" href="../stylings/contentPage/contentPageStudent2.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a href="userProfile.html" class="profile-btn" title="User Profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-            </a>
-            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
-                <img src="../images/logo.png" alt="Website Logo">
-                <h1 class="website-title">
-                    <span class="life">LIFE</span>
-                    <span class="below">BELOW</span>
-                    <span class="water">WATER</span>
-                </h1>
-            </div>
-            <nav>
-                <ul> <!-- this is the navigation bar that appears at the top of the page -->
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../gallery.html">Gallery</a></li>
-                    <li><a href="../simulator.html">Action Impact Simulator</a></li>
-                    <li><a href="../feedback.html">Feedback</a></li>
-                    <li><a href="../teamPage.html">Our Team</a></li>
-                    <li><a href="../sitemap.html">Site Map</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
-            <a href="../userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-            </a>
-            <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
-            <h2 class="sticky-title">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+/* =======================
+   GLOBAL LAYOUT
+======================= */
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    color: #1e2a2f;
+    background: #f4fbff;
+}
+
+/* =======================
+   MAIN CONTENT
+======================= */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    color: #0b3d4a;
+}
+
+/* =======================
+   QUICK NAVIGATION
+======================= */
+
+.content-nav {
+    text-align: center;
+    background: transparent;   /* remove box feel */
+    padding: 10px 0;           /* much smaller */
+    margin-bottom: 25px;
+    box-shadow: none;          /* remove elevation */
+    border: none;
+    font-size: 1px;
+    opacity: 1.85;             /* slightly muted */
+}
+
+.content-nav h2 {
+    font-size: large;
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: #01171d;
+    opacity: 1.0;
+}
+
+.content-nav ul {
+    display: flex;             /* horizontal layout */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.content-nav li {
+    margin: 0;
+}
+
+.content-nav a {
+    text-decoration: none;
+    color: #0e95de;
+    font-weight: 400;
+    padding: 5px 8px;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-size: medium;
+}
+
+.content-nav a:hover {
+    background: rgba(0, 119, 182, 0.1);
+    color: #023e8a;
+}
+
+.content-nav {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* =======================
+   SECTIONS
+======================= */
+
+section {
+    margin: 60px 0;
+    padding: 20px;
+    background: #98defa;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+section h2 {
+    color: #0b3d4a;
+    border-left: 5px solid #00b4d8;
+    padding-left: 10px;
+}
+
+section h3 {
+    color: #0077b6;
+    margin-top: 20px;
+}
+
+/* =======================
+   MEDIA (IMAGES / VIDEO)
+======================= */
+
+section img,
+video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =======================
+   TEXT
+======================= */
+
+p {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =======================
+   GO TOP BUTTON
+======================= */
+
+.go-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0077b6;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.go-top:hover {
+    background: #023e8a;
+    transform: translateY(-3px);
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b3d4a;
+    color: white;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #90e0ef;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+}
+    </style>
+    <title>Life Below Water</title>
+    <link rel="stylesheet" href="../stylings/globalStyle.css">
+    <link rel="stylesheet" href="../stylings/contentPage/contentPageStudent2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="userProfile.html" class="profile-btn" title="User Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+                <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            </svg>
+        </a>
+        <div class="logo-container">
+            <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
+            <img src="../images/logo.png" alt="Website Logo">
+            <h1 class="website-title">
                 <span class="life">LIFE</span>
-                <span class="below"> BELOW</span>
-                <span class="water"> WATER</span>
-            </h2>
-            <nav>
-                <ul>
+                <span class="below">BELOW</span>
+                <span class="water">WATER</span>
+            </h1>
+        </div>
+        <nav>
+            <ul> <!-- this is the navigation bar that appears at the top of the page -->
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../gallery.html">Gallery</a></li>
                 <li><a href="../simulator.html">Action Impact Simulator</a></li>
                 <li><a href="../feedback.html">Feedback</a></li>
                 <li><a href="../teamPage.html">Our Team</a></li>
                 <li><a href="../sitemap.html">Site Map</a></li>
-                </ul>
-            </nav>
-        </div>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section class="content-hero">
-                <h2>Content Page: Student 2</h2>
-            </section>
-            
-        </main>
+    <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
+        <a href="../userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            </svg>
+        </a>
+        <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
+        <h2 class="sticky-title">
+            <span class="life">LIFE</span>
+            <span class="below"> BELOW</span>
+            <span class="water"> WATER</span>
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../simulator.html">Action Impact Simulator</a></li>
+                <li><a href="../feedback.html">Feedback</a></li>
+                <li><a href="../teamPage.html">Our Team</a></li>
+                <li><a href="../sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </div>
 
-        <footer>
-            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
-            <p>Vinindu Wickramasinghe - 20244059</p>
-            <a href="../editor.html">Page Editor</a>
-            <a href="../validation.html">Validation</a>
-        </footer>
+    <main id="top">
+        <h1>Protecting Life Below Water</h1>
+
+        <nav class="content-nav">
+            <h2>Quick Navigation</h2>
+            <ul>
+                <li><a href="#section1">Introduction</a></li>
+                <li><a href="#section2">Ocean Threats</a></li>
+                <li><a href="#section3">Solutions</a></li>
+                <li><a href="#section4">Impact</a></li>
+                <li><a href="#section5">Conclusion</a></li>
+            </ul>
+        </nav>
+
+        <section id="section1">
+            <h2>Introduction</h2>
+            <img src="../images/ocean1.jpg" alt="Ocean ecosystem" width="1200">
+
+            <p>
+                Life below water is essential for maintaining the balance of our planet.
+                Oceans cover more than 70% of the Earth's surface and provide food,
+                oxygen, and livelihoods for billions of people.
+            </p>
+
+            <p>
+                The United Nations Sustainable Development Goal 14 focuses on conserving
+                marine ecosystems and ensuring the sustainable use of ocean resources.
+            </p>
+            <p>
+    These issues are discussed in detail in the 
+    <a href="#section2">Ocean Threats section</a>.
+</p>
+        </section>
+
+        <section id="section2">
+            <h2>Threats to Marine Life</h2>
+            <img src="../images/pollution.jpg" alt="Ocean pollution" width="1200">
+
+            <p>
+                Marine ecosystems are facing serious threats due to human activities.
+                Pollution, overfishing, and climate change are damaging ocean habitats.
+            </p>
+
+            <ul>
+                <li>Plastic pollution harming marine animals</li>
+                <li>Overfishing reducing fish populations</li>
+                <li>Coral bleaching due to rising temperatures</li>
+                <li>Oil spills destroying ecosystems</li>
+            </ul>
+        </section>
+
+        <section id="section3">
+            <h2>Solutions and Actions</h2>
+            <img src="../images/solutions.jpg" alt="Ocean conservation" width="1200">
+
+            <p>
+                Everyone can contribute to protecting life below water by making simple
+                and responsible choices in daily life.
+            </p>
+
+            <h3>Reduce Plastic Usage</h3>
+            <p>Avoid single-use plastics and recycle waste properly.</p>
+
+            <h3>Support Sustainable Fishing</h3>
+            <p>Choose seafood from sustainable sources.</p>
+
+            <h3>Participate in Cleanups</h3>
+            <p>Join beach and ocean cleanup programs.</p>
+
+            <h3>Spread Awareness</h3>
+            <p>Educate others about the importance of ocean conservation.</p>
+        </section>
+
+        <section id="section4">
+            <h2>Positive Impact</h2>
+           <video autoplay muted loop playsinline controls width="1200" poster="../images/impact.jpg">
+    <source src="../images/impact.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+            <p>
+                Protecting the oceans leads to healthier ecosystems, increased biodiversity,
+                and sustainable resources for future generations.
+            </p>
+
+            <p>
+                Small actions taken by individuals can create a powerful collective impact,
+                helping to restore marine life and protect our planet.
+            </p>
+        </section>
+
+        <section id="section5">
+            <h2>Conclusion</h2>
+
+            <p>
+                Life below water is vital for our survival and the health of the planet.
+                By taking simple actions and raising awareness, we can protect marine life
+                and ensure a sustainable future.
+            </p>
+        </section>
+
+        <a href="#top" class="go-top">Go to Top</a>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Life Below Water. All rights reserved.</p>
+        <p>Janindu Ranathunga - 20244055</p>
+        <a href="../editor.html">Page Editor</a>
+        <a href="../validation.html">Validation</a>
+    </footer>
 
 
-        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
-        <script> 
-            const stickyNav = document.querySelector('.sticky-nav');
-            const header = document.querySelector('header');
+    <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
+    <script>
+        const stickyNav = document.querySelector('.sticky-nav');
+        const header = document.querySelector('header');
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > header.offsetHeight - 80) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight - 80) {
                 stickyNav.classList.add('visible');
-                } else {
+            } else {
                 stickyNav.classList.remove('visible');
-                }
-            });
-        </script>
+            }
+        });
+    </script>
 
 
-    </body>
+</body>
+
 </html>
