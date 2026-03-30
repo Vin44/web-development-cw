@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Life Below Water</title>
+        <link rel="stylesheet" href="../stylings/globalStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <style>
+            .editor-section {
+                padding: 40px 20px;
+                max-width: 1100px;
+                margin: auto;
+            }
+
+            .card h2 {
+                border-left: 5px solid #00b4d8;
+                padding-left: 10px;
+            }
+
+            .toc a {
+                display: block;
+                margin: 6px 0;
+                color: #1cafff;
+                text-decoration: none;
+            }
+
+            .toc a:hover {
+                text-decoration: underline;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            table, th, td {
+                border: 1px solid #8c8c8c;
+            }
+
+            th {
+                background: #0077b6;
+                color: white;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            body {
+                color: white;
+            }
+
+            header {
+                color: white;
+            }
+
+            nav a {
+                color: rgb(236, 236, 236);
+            }
+
+            .card {
+                color: rgb(236, 236, 236);
+            }
+
+            table {
+                color: rgb(236, 236, 236);
+            }
+
+            td {
+                color: rgb(236, 236, 236);
+            }
+
+            .sticky-nav {
+                color: rgb(236, 236, 236);
+            }
+
+            .sticky-nav a {
+                color: rgb(236, 236, 236);
+            }
+
+            .card p {
+                color: rgb(222, 221, 221);
+            }
+
+            .card {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="../userProfile.html" class="profile-btn" title="User Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
+            </a>
+            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
+                <img src="../images/logo.png" alt="Website Logo">
+                <h1 class="website-title">
+                    <span class="op">OceanPulse:</span>
+                    <span class="life">LIFE</span>
+                    <span class="below">BELOW</span>
+                    <span class="water">WATER</span>
+                </h1>
+            </div>
+            <nav>
+                <ul> <!-- this is the navigation bar that appears at the top of the page -->
+                    <li><a href="../index.html" class="active">Home</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../simulator.html">Action Impact Simulator</a></li>
+                    <li><a href="../feedback.html">Feedback</a></li>
+                    <li><a href="../teamPage.html">Our Team</a></li>
+                    <li><a href="../sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
+            <a href="../userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
+            </a>
+            <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
+            <h2 class="sticky-title">
+                <span class="op-span">OceanPulse:</span>
+                <span class="life">LIFE</span>
+                <span class="below"> BELOW</span>
+                <span class="water"> WATER</span>
+            </h2>
+            <nav>
+                <ul>
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../simulator.html">Action Impact Simulator</a></li>
+                <li><a href="../feedback.html">Feedback</a></li>
+                <li><a href="../teamPage.html">Our Team</a></li>
+                <li><a href="../sitemap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+
+            <!-- STUDENT DETAILS -->
+            <div class="card page-editor">
+                <h2>Student Details</h2>
+                <p><strong>Name:</strong> Krishantha Sandaruwan</p>
+                <p><strong>ID:</strong> 20244064</p>
+                <p><strong>Role:</strong> Team , Feedback page</p>
+            </div>
+
+            <!-- HOME PAGE CARD -->
+            <div class="card page-editor">
+                <h2>Team Page</h2>
+                <p>
+                    Our team worked together to design and develop this project by combining our ideas, creativity, and technical skills. Each member contributed to different parts of the website, such as design, content creation, and coding, to ensure the project is informative, accessible, and easy to use.
+                </p>
+
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+                <a href="../teamPage.html">Go to Home Page</a>
+            </div>
+
+            <!-- GALLERY PAGE CARD -->
+            <div class="card page-editor">
+                <h2>Feedback</h2>
+                <p>
+                    This page is the Feedback section of the OceanPulse: Life Below Water website. It includes a navigation bar at the top that allows users to access different pages such as Home, Gallery, Action Impact Simulator, Feedback, Our Team, and Site Map. The page also displays several available programs like the Clean Ocean Initiative, Coral Reef Restoration, Sustainable Fishing Practices, and Beach Clean-Up Events, where users can learn more or get involved. Below that, the Ratings and Reviews section shows the overall rating and comments from users who participated in these programs. At the bottom of the page, a feedback form allows visitors to share their opinions and experiences to help improve the programs.
+                </p>
+
+                
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+                <a href="../teamPage.html">Go to Gallery Page</a>
+            </div>
+
+            
+            <div id="meetings" class="card">
+                <h2>Meetings</h2>
+                <table>
+                    <tr>
+                        <th>Meeting</th>
+                        <th>Date & Time</th>
+                        <th>Format</th>
+                        <th>Objective</th>
+                        <th>Attended</th>
+                        <th>My Contribution</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>02/22/2026</td>
+                        <td>Face to face</td>
+                        <td>All group members brainstormed and agreed to choose the topic "Life Under Water".</td>
+                        <td>Yes</td>
+                        <td>Suggested the topic and contributed ideas during initial team discussion.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>03/07/2026</td>
+                        <td>Face to face</td>
+                        <td>Researched on the selected topic and distributed the tasks among group members.</td>
+                        <td>Yes</td>
+                        <td>Researched the topic and helped distribute tasks among team members.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>03/08/2026</td>
+                        <td>Online</td>
+                        <td>Created a github repository and made branches for each member to upload their contribution.</td>
+                        <td>Yes</td>
+                        <td>Created GitHub repository and organized branches for each member.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>03/15/2026</td>
+                        <td>Online</td>
+                        <td>Discussed each member's contribution on their specific tasks and progress.</td>
+                        <td>Yes</td>
+                        <td>Reviewed My code and fixed errors</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>03/27/2026</td>
+                        <td>Hybrid</td>
+                        <td>Discussed and worked on common tasks in the selected topic.</td>
+                        <td>Yes</td>
+                        <td>Collaborated with team members to complete shared development tasks.</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>03/29/2026</td>
+                        <td>Online</td>
+                        <td>Merged all finalized contribution of each member and walked through the entire project.</td>
+                        <td>Yes</td>
+                        <td>Helped combine all members’ work and reviewed the final project.</td>
+                    </tr>
+                </table>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+            <p>Krishantha Sandaruwan - 20244064</p>
+            <a href="../page-editors/pageEditorStudent3.html">Page Editor</a>
+            <a href="../validation/validationPageStudent3.html">Validation</a>
+        </footer>
+
+
+        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
+        <script> 
+            const stickyNav = document.querySelector('.sticky-nav');
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > header.offsetHeight - 80) {
+                stickyNav.classList.add('visible');
+                } else {
+                stickyNav.classList.remove('visible');
+                }
+            });
+        </script>
+
+
+    </body>
+</html>
