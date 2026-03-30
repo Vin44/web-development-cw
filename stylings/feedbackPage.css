@@ -1,0 +1,1236 @@
+/* ============================================================
+   feedbackPage.css
+   Page-specific styles for feedback.html
+   Works alongside globalStyle.css — do NOT override global rules
+   ============================================================ */
+
+
+/* -----------------------------------------------
+   SHARED SECTION HELPERS
+----------------------------------------------- */
+
+/* page title at the top of <main> */
+.fb-page-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.fb-page-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    margin: 0 0 40px 0;
+    line-height: 1.7;
+}
+
+/* shared heading style used across all three sections */
+.section-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(110, 156, 248, 0.4);
+}
+
+
+/* -----------------------------------------------
+   SECTION 1: PROGRAMME CARDS
+----------------------------------------------- */
+
+.programmes-section {
+    margin-bottom: 50px;
+}
+
+/* row that holds the heading and the sort dropdown side by side */
+.programmes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.programmes-header .section-heading {
+    margin-bottom: 0; /* override shared heading bottom margin */
+    border-bottom: none; /* no border in this context */
+    padding-bottom: 0;
+}
+
+
+/* --- Sort / Filter Dropdown --- */
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.filter-dropdown {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: rgba(1, 18, 70, 0.6);
+    border: 1px solid rgba(110, 156, 248, 0.5);
+    border-radius: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.filter-dropdown:hover,
+.filter-dropdown:focus {
+    border-color: #6e9cf8;
+    background: rgba(1, 18, 70, 0.85);
+}
+
+/* keep dropdown options readable on all browsers */
+.filter-dropdown option {
+    background: #011246;
+    color: #ffffff;
+}
+
+
+/* --- Scrollable container for cards --- */
+/* The container has a fixed height and scrolls horizontally.
+   This matches the requirement that the section is scrollable. */
+
+.cards-scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 16px; /* space for the scrollbar */
+    /* custom scrollbar to match the site theme */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(110, 156, 248, 0.6) rgba(255, 255, 255, 0.05);
+}
+
+/* webkit scrollbar styling (Chrome, Safari) */
+.cards-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+.cards-scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+.cards-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(110, 156, 248, 0.6);
+    border-radius: 3px;
+}
+
+
+/* --- Individual programme card --- */
+
+.prog-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    min-width: 200px; /* stops cards from squashing */
+    max-width: 200px; /* keeps all cards the same width */
+    flex-shrink: 0;   /* stops flexbox from shrinking cards */
+
+}
+
+
+.prog-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* icon/thumbnail area */
+.prog-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 14px auto;
+    background: rgba(1, 18, 70, 0.4);
+    border-radius: 50%;
+    border: 2px solid rgba(110, 156, 248, 0.4);
+}
+
+.prog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;             /* Makes all cards in the row the same height */
+    padding: 20px;
+    padding-bottom: 10px;    /* Keeps the button exactly 10px from the bottom */
+    background: rgba(255, 255, 255, 0.05); /* Your card background color */
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.prog-card-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.prog-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+
+    /* override globalStyle.css main p colour for cards */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* "Get Involved" / "Learn More" button */
+.prog-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(110, 156, 248, 0.25);
+    border: 1px solid rgba(110, 156, 248, 0.6);
+    border-radius: 20px;
+    padding: 7px 18px;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.2s ease,
+                box-shadow 0.25s ease;
+}
+
+/* clear hover effect on the button (as required) */
+.prog-btn:hover {
+    background: rgba(110, 156, 248, 0.55);
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px rgba(110, 156, 248, 0.35);
+}
+
+.prog-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* -----------------------------------------------
+   SECTION 2: RATINGS & REVIEWS
+----------------------------------------------- */
+
+.reviews-section {
+    margin-bottom: 50px;
+}
+
+/* overall score block at the top of the reviews section */
+.overall-rating-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(110, 156, 248, 0.12);
+    border: 1px solid rgba(110, 156, 248, 0.35);
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+    width: fit-content;
+}
+
+.overall-score {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #6e9cf8;
+    line-height: 1;
+}
+
+.score-denom {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(110, 156, 248, 0.7);
+}
+
+.overall-label-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rating-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.review-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* container for the three review cards - horizontal layout */
+.review-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* individual review card */
+.review-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    padding: 18px 20px;
+    flex: 1 1 250px; /* grow, shrink, minimum width */
+    max-width: 340px;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.review-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-3px);
+}
+
+/* top row: review title and rating score side by side */
+.review-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.review-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    flex: 1;
+}
+
+.review-rating {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #6e9cf8;
+    background: rgba(110, 156, 248, 0.15);
+    border: 1px solid rgba(110, 156, 248, 0.4);
+    border-radius: 8px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.review-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.see-more-link {
+    font-family: 'Inter', sans-serif;
+    color: #6e9cf8;
+    font-size: 0.82rem;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.see-more-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* reviewer name and date shown at the bottom of the card */
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* -----------------------------------------------
+   SECTION 3: FEEDBACK FORM
+----------------------------------------------- */
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: -10px 0 24px 0;
+}
+
+/* the actual form */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* --- fieldset and legend --- */
+
+.form-fieldset {
+    border: 1px solid rgba(110, 156, 248, 0.35);
+    border-radius: 14px;
+    padding: 24px 24px 20px 24px;
+    background: rgba(1, 18, 70, 0.2);
+    margin: 0;
+}
+
+.form-legend {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6e9cf8;
+    padding: 0 10px;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- form-group: wraps label + input + error --- */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* two-column layout for date fields side by side */
+.form-group--two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+
+/* --- labels --- */
+
+.form-label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 6px;
+}
+
+.required-star {
+    color: #f87171; /* red star for required fields */
+    margin-left: 2px;
+}
+
+
+/* --- inputs, textareas, selects --- */
+
+.form-input {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.25s ease, background 0.25s ease;
+    box-sizing: border-box; /* makes width 100% include padding */
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.form-input:focus {
+    border-color: #6e9cf8;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* textarea specific */
+.form-textarea {
+    resize: vertical; /* let user resize vertically only */
+    min-height: 80px;
+}
+
+/* select specific - needs slightly different styling */
+.form-select {
+    appearance: none; /* remove default arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e9cf8' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px; /* space for the arrow */
+    cursor: pointer;
+}
+
+.form-select option {
+    background: #011246;
+    color: #ffffff;
+}
+
+
+/* --- Error state: red border on invalid fields --- */
+
+.input-error {
+    border-color: #f87171 !important; /* red border */
+    background: rgba(248, 113, 113, 0.08) !important;
+}
+
+
+/* --- Error message text below the field --- */
+
+.field-error {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #f87171;
+    margin-top: 5px;
+    min-height: 1em; /* stops the layout jumping when error appears */
+}
+
+
+/* --- Live character counter --- */
+
+.char-counter {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 5px;
+    text-align: right;
+    transition: color 0.2s ease;
+}
+
+
+/* --- Submit button --- */
+
+.form-submit-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(110, 156, 248, 0.35);
+    border: 1px solid rgba(110, 156, 248, 0.7);
+    border-radius: 12px;
+    padding: 12px 36px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: rgba(110, 156, 248, 0.6);
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(110, 156, 248, 0.35);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* --- Confirmation message (shown by JS after valid submit) --- */
+
+.form-confirmation {
+    display: flex;       /* set to none by default via inline style in HTML */
+    align-items: center;
+    gap: 16px;
+    background: rgba(74, 222, 128, 0.12);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.form-confirmation p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4ade80;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+----------------------------------------------- */
+
+@media (max-width: 700px) {
+    /* stack the date fields vertically on small screens */
+    .form-group--two-col {
+        grid-template-columns: 1fr;
+    }
+
+    /* stack the overall rating block */
+    .overall-rating-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* submit button full width on mobile */
+    .form-submit-row {
+        justify-content: stretch;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    /* programmes header stacks on small screens */
+    .programmes-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ============================================================
+   feedbackPage.css
+   Page-specific styles for feedback.html
+   Works alongside globalStyle.css — do NOT override global rules
+   ============================================================ */
+
+
+/* -----------------------------------------------
+   SHARED SECTION HELPERS
+----------------------------------------------- */
+
+/* page title at the top of <main> */
+.fb-page-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.fb-page-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    margin: 0 0 40px 0;
+    line-height: 1.7;
+}
+
+/* shared heading style used across all three sections */
+.section-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(110, 156, 248, 0.4);
+}
+
+
+/* -----------------------------------------------
+   SECTION 1: PROGRAMME CARDS
+----------------------------------------------- */
+
+.programmes-section {
+    margin-bottom: 50px;
+}
+
+/* row that holds the heading and the sort dropdown side by side */
+.programmes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.programmes-header .section-heading {
+    margin-bottom: 0; /* override shared heading bottom margin */
+    border-bottom: none; /* no border in this context */
+    padding-bottom: 0;
+}
+
+
+/* --- Sort / Filter Dropdown --- */
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.filter-dropdown {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: rgba(1, 18, 70, 0.6);
+    border: 1px solid rgba(110, 156, 248, 0.5);
+    border-radius: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.filter-dropdown:hover,
+.filter-dropdown:focus {
+    border-color: #6e9cf8;
+    background: rgba(1, 18, 70, 0.85);
+}
+
+/* keep dropdown options readable on all browsers */
+.filter-dropdown option {
+    background: #011246;
+    color: #ffffff;
+}
+
+
+/* --- Scrollable container for cards --- */
+/* The container has a fixed height and scrolls horizontally.
+   This matches the requirement that the section is scrollable. */
+
+.cards-scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 16px; /* space for the scrollbar */
+    /* custom scrollbar to match the site theme */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(110, 156, 248, 0.6) rgba(255, 255, 255, 0.05);
+}
+
+/* webkit scrollbar styling (Chrome, Safari) */
+.cards-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+.cards-scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+.cards-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(110, 156, 248, 0.6);
+    border-radius: 3px;
+}
+
+
+/* --- Individual programme card --- */
+
+.prog-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    min-width: 200px; /* stops cards from squashing */
+    max-width: 200px; /* keeps all cards the same width */
+    flex-shrink: 0;   /* stops flexbox from shrinking cards */
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+.prog-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* icon/thumbnail area */
+.prog-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 14px auto;
+    background: rgba(1, 18, 70, 0.4);
+    border-radius: 50%;
+    border: 2px solid rgba(110, 156, 248, 0.4);
+}
+
+.prog-card-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.prog-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+
+    /* override globalStyle.css main p colour for cards */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* "Get Involved" / "Learn More" button */
+.prog-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(110, 156, 248, 0.25);
+    border: 1px solid rgba(110, 156, 248, 0.6);
+    border-radius: 20px;
+    padding: 7px 18px;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.2s ease,
+                box-shadow 0.25s ease;
+}
+
+/* clear hover effect on the button (as required) */
+.prog-btn:hover {
+    background: rgba(110, 156, 248, 0.55);
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px rgba(110, 156, 248, 0.35);
+}
+
+.prog-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* -----------------------------------------------
+   SECTION 2: RATINGS & REVIEWS
+----------------------------------------------- */
+
+.reviews-section {
+    margin-bottom: 50px;
+}
+
+/* overall score block at the top of the reviews section */
+.overall-rating-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(110, 156, 248, 0.12);
+    border: 1px solid rgba(110, 156, 248, 0.35);
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+    width: fit-content;
+}
+
+.overall-score {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #6e9cf8;
+    line-height: 1;
+}
+
+.score-denom {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(110, 156, 248, 0.7);
+}
+
+.overall-label-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rating-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.review-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* container for the three review cards - horizontal layout */
+.review-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* individual review card */
+.review-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    padding: 18px 20px;
+    flex: 1 1 250px; /* grow, shrink, minimum width */
+    max-width: 340px;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.review-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-3px);
+}
+
+/* top row: review title and rating score side by side */
+.review-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.review-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    flex: 1;
+}
+
+.review-rating {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #6e9cf8;
+    background: rgba(110, 156, 248, 0.15);
+    border: 1px solid rgba(110, 156, 248, 0.4);
+    border-radius: 8px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.review-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.see-more-link {
+    font-family: 'Inter', sans-serif;
+    color: #6e9cf8;
+    font-size: 0.82rem;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.see-more-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* reviewer name and date shown at the bottom of the card */
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* -----------------------------------------------
+   SECTION 3: FEEDBACK FORM
+----------------------------------------------- */
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: -10px 0 24px 0;
+}
+
+/* the actual form */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* --- fieldset and legend --- */
+
+.form-fieldset {
+    border: 1px solid rgba(110, 156, 248, 0.35);
+    border-radius: 14px;
+    padding: 24px 24px 20px 24px;
+    background: rgba(1, 18, 70, 0.2);
+    margin: 0;
+}
+
+.form-legend {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6e9cf8;
+    padding: 0 10px;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- form-group: wraps label + input + error --- */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* two-column layout for date fields side by side */
+.form-group--two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+
+/* --- labels --- */
+
+.form-label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 6px;
+}
+
+.required-star {
+    color: #f87171; /* red star for required fields */
+    margin-left: 2px;
+}
+
+
+/* --- inputs, textareas, selects --- */
+
+.form-input {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.25s ease, background 0.25s ease;
+    box-sizing: border-box; /* makes width 100% include padding */
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.form-input:focus {
+    border-color: #6e9cf8;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* textarea specific */
+.form-textarea {
+    resize: vertical; /* let user resize vertically only */
+    min-height: 80px;
+}
+
+/* select specific - needs slightly different styling */
+.form-select {
+    appearance: none; /* remove default arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e9cf8' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px; /* space for the arrow */
+    cursor: pointer;
+}
+
+.form-select option {
+    background: #011246;
+    color: #ffffff;
+}
+
+
+/* --- Error state: red border on invalid fields --- */
+
+.input-error {
+    border-color: #f87171 !important; /* red border */
+    background: rgba(248, 113, 113, 0.08) !important;
+}
+
+
+/* --- Error message text below the field --- */
+
+.field-error {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #f87171;
+    margin-top: 5px;
+    min-height: 1em; /* stops the layout jumping when error appears */
+}
+
+
+/* --- Live character counter --- */
+
+.char-counter {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 5px;
+    text-align: right;
+    transition: color 0.2s ease;
+}
+
+
+/* --- Submit button --- */
+
+.form-submit-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(110, 156, 248, 0.35);
+    border: 1px solid rgba(110, 156, 248, 0.7);
+    border-radius: 12px;
+    padding: 12px 36px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: rgba(110, 156, 248, 0.6);
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(110, 156, 248, 0.35);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* --- Confirmation message (shown by JS after valid submit) --- */
+
+.form-confirmation {
+    display: flex;       /* set to none by default via inline style in HTML */
+    align-items: center;
+    gap: 16px;
+    background: rgba(74, 222, 128, 0.12);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.form-confirmation p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4ade80;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+----------------------------------------------- */
+
+@media (max-width: 700px) {
+    /* stack the date fields vertically on small screens */
+    .form-group--two-col {
+        grid-template-columns: 1fr;
+    }
+
+    /* stack the overall rating block */
+    .overall-rating-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* submit button full width on mobile */
+    .form-submit-row {
+        justify-content: stretch;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    /* programmes header stacks on small screens */
+    .programmes-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

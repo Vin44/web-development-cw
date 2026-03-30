@@ -1,0 +1,200 @@
+/* ============================================================
+   teamPage.css - Styles specific to the Team Page only
+   This file works alongside globalStyle.css
+   ============================================================ */
+ 
+ 
+/* --- Page heading styles --- */
+ 
+.team-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+ 
+.team-subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+ 
+ 
+/* --- Team grid layout --- */
+/* puts the 4 member cards side by side in a row,
+   and wraps them on smaller screens */
+ 
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+ 
+ 
+/* --- Individual member card --- */
+ 
+.member-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    width: 220px;
+    padding: 20px 16px;
+    text-align: center;
+    cursor: pointer;
+ 
+    /* smooth transitions for hover effects */
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+ 
+/* hover effect on the card - scale up and add shadow */
+.member-card:hover,
+.member-card:focus {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+ 
+/* focus ring for keyboard users */
+.member-card:focus-visible {
+    outline: 3px solid #6e9cf8;
+    outline-offset: 4px;
+}
+ 
+ 
+/* --- Thumbnail image area --- */
+ 
+.member-thumbnail {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 14px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(110, 156, 248, 0.6);
+    background: rgba(1, 18, 70, 0.5);
+ 
+    /* transition for the border glow on hover */
+    transition: border-color 0.3s ease;
+}
+ 
+.member-card:hover .member-thumbnail,
+.member-card:focus .member-thumbnail {
+    border-color: #6e9cf8;
+}
+ 
+/* the actual photo - fills the circular container */
+.member-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+ 
+/* fallback icon shown if image fails to load or does not exist */
+/* this sits centered inside the circle */
+.member-icon-fallback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+ 
+/* hide the fallback icon when a real image loads fine */
+/* Note: if you have real photos, the img will cover the fallback */
+ 
+ 
+/* --- Member name and role (always visible) --- */
+ 
+.member-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+}
+ 
+.member-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #6e9cf8;
+    font-weight: 500;
+    margin: 0;
+}
+ 
+ 
+/* --- Expandable details section --- */
+/* hidden by default, expands on hover/focus using max-height trick */
+ 
+.member-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+ 
+    /* smooth expand animation */
+    transition: max-height 0.4s ease,
+                opacity 0.4s ease,
+                margin-top 0.3s ease;
+ 
+    margin-top: 0;
+    text-align: left;
+}
+ 
+/* when the card is hovered or focused, expand the details */
+.member-card:hover .member-details,
+.member-card:focus .member-details {
+    max-height: 300px;  /* large enough to show all content */
+    opacity: 1;
+    margin-top: 14px;
+}
+ 
+/* style the text inside the details box */
+.member-details p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0 0 8px 0;
+ 
+    /* override the global main p style so it fits the card */
+    color: rgba(255, 255, 255, 0.88);
+}
+ 
+.member-details strong {
+    color: #6e9cf8;
+}
+ 
+/* small top border to visually separate details from the name */
+.member-details::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: rgba(110, 156, 248, 0.5);
+    margin: 0 auto 12px auto;
+    border-radius: 2px;
+}
+ 
+ 
+/* --- Responsive: stack cards on small screens --- */
+ 
+@media (max-width: 600px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .member-card {
+        width: 85%;
+    }
+}

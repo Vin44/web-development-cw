@@ -20,7 +20,6 @@
             <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
                 <img src="../images/logo.png" alt="Website Logo">
                 <h1 class="website-title">
-                    <span class="op">OceanPulse:</span>
                     <span class="life">LIFE</span>
                     <span class="below">BELOW</span>
                     <span class="water">WATER</span>
@@ -46,7 +45,6 @@
             </a>
             <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
             <h2 class="sticky-title">
-                <span class="op-span">OceanPulse:</span>
                 <span class="life">LIFE</span>
                 <span class="below"> BELOW</span>
                 <span class="water"> WATER</span>
@@ -59,39 +57,265 @@
                 <li><a href="../feedback.html">Feedback</a></li>
                 <li><a href="../teamPage.html">Our Team</a></li>
                 <li><a href="../sitemap.html">Site Map</a></li>
-                </ul>
-            </nav>
-        </div>
+            </ul>
+        </nav>
+    </div>
 
-        <main>
-            <section class="content-hero">
-                <h2>Content Page: Student 3</h2>
-            </section>
-            
-        </main>
+    <!-- =====================
+         MAIN CONTENT
+    ===================== -->
+    <main id="top">
 
-        <footer>
-            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
-            <p>Vinindu Wickramasinghe - 20244059</p>
-            <a href="../editor.html">Page Editor</a>
-            <a href="../validation.html">Validation</a>
-        </footer>
+        <h1>Ocean Acidification &amp; Deep Sea Restoration</h1>
 
+        <!-- Quick Navigation -->
+        <nav class="content-nav">
+            <ul>
+                <li><a href="#section1">Introduction</a></li>
+                <li><a href="#section2">How Acidification Works</a></li>
+                <li><a href="#section3">Impact on Deep Sea Life</a></li>
+                <li><a href="#section4">Restoration Strategies</a></li>
+                <li><a href="#section5">Conclusion</a></li>
+            </ul>
+        </nav>
 
-        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
-        <script> 
-            const stickyNav = document.querySelector('.sticky-nav');
-            const header = document.querySelector('header');
+        <!-- Section 1: Introduction -->
+        <section id="section1">
+            <h2>Introduction</h2>
+            <img src="../images/contentPageStudent3/acidification.jpg" alt="Ocean acidification illustration" width="1200">
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > header.offsetHeight - 80) {
+            <p>
+                The world's oceans absorb roughly <strong>30%</strong> of all carbon dioxide (CO₂) released
+                into the atmosphere by human activities. While this natural buffering service
+                has slowed the pace of climate change, it comes at a severe cost — the chemical
+                composition of seawater is quietly shifting, making our oceans more acidic year
+                by year.
+            </p>
+
+            <p>
+                Ocean acidification is one of the least visible yet most consequential environmental
+                crises of our time. Unlike surface pollution or visible oil spills, it operates
+                silently in the chemistry of the water itself, gradually undermining the foundations
+                of marine food webs and deep-sea habitats.
+            </p>
+
+            <div class="fact-box">
+                <p>
+                    &#9432; Since the Industrial Revolution, ocean pH has dropped from approximately
+                    8.2 to 8.1 — a 26% increase in acidity, as pH is measured on a logarithmic scale.
+                </p>
+            </div>
+
+            <p>
+                This page explores how acidification happens, how it threatens deep-sea ecosystems,
+                and what restoration science is doing to reverse the damage. These challenges are
+                examined in depth in the
+                <a href="#section3">Impact on Deep Sea Life section</a>.
+            </p>
+        </section>
+
+        <!-- Section 2: How Acidification Works -->
+        <section id="section2">
+            <h2>How Ocean Acidification Works</h2>
+            <img src="../images/contentPageStudent3/deepsea.jpg" alt="CO2 absorption in the ocean" width="1200">
+
+            <p>
+                When CO₂ dissolves into seawater, it reacts with water molecules to form carbonic
+                acid (H₂CO₃). This weak acid then breaks apart, releasing hydrogen ions that
+                lower the water's pH — making it more acidic. Simultaneously, the process
+                consumes carbonate ions, which are the very building blocks that marine organisms
+                use to construct shells and skeletons.
+            </p>
+
+            <h3>The Chemistry in Brief</h3>
+            <p>
+                The reaction can be summarised as: CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻.
+                As hydrogen ion concentration rises, carbonate ion availability drops,
+                hampering shell formation in organisms from oysters to pteropods to deep-sea corals.
+            </p>
+
+            <h3>Why the Deep Ocean Is Most Vulnerable</h3>
+            <p>
+                Cold, high-pressure deep waters naturally hold more dissolved CO₂ and are
+                already closer to the saturation threshold for aragonite and calcite —
+                the minerals used by marine calcifiers. As surface acidification
+                percolates downward over decades, deep-sea ecosystems face the fastest
+                rate of chemical change in millions of years.
+            </p>
+
+            <ul>
+                <li>Deep waters absorb CO₂ faster due to lower temperatures</li>
+                <li>Aragonite saturation horizons are rising toward the surface</li>
+                <li>Cold-water corals below 200 m are acutely exposed</li>
+                <li>Abyssal sediments are beginning to dissolve under increased acidity</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Impact on Deep Sea Life -->
+        <section id="section3">
+            <h2>Impact on Deep Sea Life</h2>
+            <img src="../images/contentPageStudent3/deepseaimpact.jpg" alt="Impact on deep sea organisms" width="1200">
+
+            <p>
+                The deep ocean — everything below 200 metres — covers over 65% of Earth's
+                surface and contains the greatest volume of living space on the planet.
+                Yet it remains dramatically understudied and underprotected. Acidification
+                is now threatening its most ancient and slow-growing residents.
+            </p>
+
+            <h3>Cold-Water Coral Frameworks</h3>
+            <p>
+                Unlike tropical corals, cold-water corals do not rely on photosynthesis.
+                They build enormous reef frameworks at depths of 200–2,000 m, providing
+                habitat for thousands of species. Acidified water corrodes their calcium
+                carbonate structures faster than the corals can repair them.
+            </p>
+
+            <h3>Pteropods and Planktonic Calcifiers</h3>
+            <p>
+                Sea butterflies (pteropods) are free-swimming snails whose shells dissolve
+                visibly in water already observed in parts of the Southern Ocean. As a
+                critical food source for salmon, herring, and whales, their decline
+                would cascade through entire food webs.
+            </p>
+
+            <h3>Sea Urchins and Echinoderms</h3>
+            <p>
+                Studies show that sea urchin larvae raised in acidified water develop
+                misshapen skeletons and suffer higher mortality rates, disrupting their
+                role as keystone grazers that control algae on rocky seafloors.
+            </p>
+
+            <div class="fact-box">
+                <p>
+                    &#9432; Scientists estimate that by 2100, up to 70% of cold-water coral
+                    habitats could be exposed to corrosive conditions if CO₂ emissions
+                    continue at the current rate.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Restoration Strategies -->
+        <section id="section4">
+            <h2>Restoration Strategies</h2>
+            <img src="../images/contentPageStudent3/restoration.jpg" alt="Restoration Strategies" width="1200">
+
+            <p>
+                Addressing ocean acidification requires action on two fronts: cutting the
+                CO₂ emissions that drive it, and actively restoring the ecosystems already
+                damaged. A growing body of research is identifying promising interventions
+                at both local and global scales.
+            </p>
+
+            <h3>Ocean Alkalinity Enhancement (OAE)</h3>
+            <p>
+                By adding alkaline minerals such as olivine or crushed limestone to
+                seawater, scientists can chemically neutralise excess acidity and increase
+                the ocean's capacity to absorb more CO₂. Pilot trials are underway in
+                coastal regions of Norway and New Zealand.
+            </p>
+
+            <h3>Kelp Forest and Seagrass Restoration</h3>
+            <p>
+                Macroalgae and seagrass beds absorb CO₂ through photosynthesis, locally
+                raising pH and creating refugia where calcifying organisms can shelter.
+                Projects along the Pacific coast of the United States have demonstrated
+                measurable pH improvements within restored kelp canopies.
+            </p>
+
+            <h3>Deep-Sea Marine Protected Areas (MPAs)</h3>
+            <p>
+                Establishing no-take MPAs around cold-water coral mounts and seamounts
+                reduces additional stressors — trawling damage, sediment disruption —
+                that compound the harm from acidification, giving ecosystems better
+                resilience to withstand chemical changes.
+            </p>
+
+            <h3>Cold-Water Coral Nurseries</h3>
+            <p>
+                Researchers in Europe and Canada are cultivating cold-water coral
+                fragments in controlled deep-sea nurseries, selectively breeding
+                specimens that show greater tolerance to lower pH. Successful colonies
+                are transplanted back onto degraded reef frameworks.
+            </p>
+
+            <ul>
+                <li>Ocean Alkalinity Enhancement is scalable and reversible</li>
+                <li>Kelp restoration improves local pH conditions rapidly</li>
+                <li>MPAs reduce compounding stressors on vulnerable reefs</li>
+                <li>Coral nurseries preserve genetic diversity for future restoration</li>
+                <li>Monitoring networks track real-time pH changes at depth</li>
+            </ul>
+        </section>
+
+        <!-- Section 5: Conclusion -->
+        <section id="section5">
+            <h2>Conclusion</h2>
+
+            <p>
+                Ocean acidification is not a distant future threat — it is an active,
+                measurable transformation happening right now in the deepest and most
+                remote parts of our planet. The chemistry of our seas has shifted more
+                in the past 200 years than in the previous 20 million, and the deep-sea
+                ecosystems bearing the greatest burden of this change are among the least
+                understood and protected environments on Earth.
+            </p>
+
+            <p>
+                Yet there is reason for measured hope. From alkalinity enhancement to
+                coral nurseries and expanding deep-sea MPAs, science is rapidly developing
+                tools that can slow, halt, and in some cases reverse localised acidification
+                damage. The missing ingredient is not innovation — it is the political will
+                to fund these solutions at meaningful scale and, most critically, to address
+                the root cause: relentless CO₂ emissions.
+            </p>
+
+            <p>
+                Protecting the deep ocean means protecting a world most humans will never see
+                but cannot survive without. Every action taken to reduce carbon emissions
+                today is an investment in an underwater world that sustains all life on the
+                surface above it.
+            </p>
+
+            <div class="fact-box">
+                <p>
+                    &#9432; The UN Decade of Ocean Science (2021–2030) has identified ocean
+                    acidification monitoring and deep-sea restoration as two of its highest
+                    priority research goals globally.
+                </p>
+            </div>
+        </section>
+
+        <a href="#top" class="go-top">&#8679; Go to Top</a>
+
+    </main>
+
+    <!-- =====================
+         FOOTER
+    ===================== -->
+    <footer>
+        <p>&copy; 2026 Life Below Water. All rights reserved.</p>
+        <p>Student Name — Student ID</p>
+        <a href="../page-editors/pageEditorStudent3.html">Page Editor</a>
+        <a href="../validation/validationPageStudent3.html">Validation</a>
+    </footer>
+
+    <!-- =====================
+         STICKY NAV SCRIPT
+    ===================== -->
+    <script>
+        const stickyNav = document.querySelector('.sticky-nav');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight - 80) {
                 stickyNav.classList.add('visible');
-                } else {
+            } else {
                 stickyNav.classList.remove('visible');
-                }
-            });
-        </script>
+            }
+        });
+    </script>
 
+</body>
 
-    </body>
 </html>
