@@ -1,426 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Profile - Life Below Water</title>
-        <link rel="stylesheet" href="stylings/globalStyle.css">
-        <link rel="stylesheet" href="stylings/userProfile.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a href="userProfile.html" class="profile-btn active" title="User Profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-            </a>
-            <div class="logo-container">
-                <img src="images/logo.png" alt="Website Logo">
-                <h1 class="website-title">
-                    <span class="op">OceanPulse:</span>
-                    <span class="life">LIFE</span>
-                    <span class="below">BELOW</span>
-                    <span class="water">WATER</span>
-                </h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="simulator.html">Action Impact Simulator</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="teamPage.html">Our Team</a></li>
-                    <li><a href="sitemap.html">Site Map</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="sticky-nav" id="stickyNav">
-            <a href="userProfile.html" class="profile-btn profile-btn--sticky active" title="User Profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-            </a>
-            <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
-            <h2 class="sticky-title">
-                <span class="op-span">OceanPulse:</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Life Below Water</title>
+    <link rel="stylesheet" href="stylings/globalStyle.css">
+    <link rel="stylesheet" href="stylings/userProfile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="userProfile.html" class="profile-btn active" title="User Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+                <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            </svg>
+        </a>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Website Logo">
+            <h1 class="website-title">
+                <span class="op">OceanPulse:</span>
                 <span class="life">LIFE</span>
-                <span class="below"> BELOW</span>
-                <span class="water"> WATER</span>
-            </h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="simulator.html">Action Impact Simulator</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="teamPage.html">Our Team</a></li>
-                    <li><a href="sitemap.html">Site Map</a></li>
-                </ul>
-            </nav>
+                <span class="below">BELOW</span>
+                <span class="water">WATER</span>
+            </h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="simulator.html">Action Impact Simulator</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="teamPage.html">Our Team</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section class="profile-hero">
-                <h2>Progressive User Profile</h2>
-                <p>This page builds a user profile gradually using JavaScript prompts (no HTML forms). You can complete steps in order, skip questions, and revisit steps later to enrich your profile.</p>
-            </section>
+    <div class="sticky-nav" id="stickyNav">
+        <a href="userProfile.html" class="profile-btn profile-btn--sticky active" title="User Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            </svg>
+        </a>
+        <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
+        <h2 class="sticky-title">
+            <span class="op-span">OceanPulse:</span>
+            <span class="life">LIFE</span>
+            <span class="below"> BELOW</span>
+            <span class="water"> WATER</span>
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="simulator.html">Action Impact Simulator</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="teamPage.html">Our Team</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </div>
 
-            <div class="profile-container">
-                <!-- Control Panel -->
-                <div class="control-panel">
-                    <div class="button-controls">
-                        <button class="btn btn-primary btn-large" id="startBtn" onclick="startOrContinueProfile()">Start / Continue Profile</button>
-                        <button class="btn btn-secondary" onclick="restartProfile()">Reset Profile</button>
+    <main>
+        <section class="profile-hero">
+            <h2>Progressive User Profile</h2>
+            <p>You can complete steps in order, skip questions and revisit steps later to enrich your profile.</p>
+        </section>
+
+        <div class="profile-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="button-controls">
+                    <button class="btn btn-primary btn-large" id="startBtn" onclick="startOrContinueProfile()">Start /
+                        Continue Profile</button>
+                    <button class="btn btn-secondary" onclick="restartProfile()">Reset Profile</button>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <h3>Completion: <span id="completionPercentage">0</span>%</h3>
+                        <p id="promptCount" class="prompt-count">(0 of 9 prompts completed)</p>
                     </div>
-
-                    <div class="progress-section">
-                        <div class="progress-info">
-                            <h3>Completion: <span id="completionPercentage">0</span>%</h3>
-                            <p id="promptCount" class="prompt-count">(0 of 9 prompts completed)</p>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" id="progressBar"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step Navigation -->
-                <div class="step-navigation">
-                    <span class="steps-label">Steps:</span>
-                    <button class="step-btn" id="stepBtn1" onclick="goToStep(1)">Step 1: Basics</button>
-                    <button class="step-btn" id="stepBtn2" onclick="goToStep(2)">Step 2: Interests</button>
-                    <button class="step-btn" id="stepBtn3" onclick="goToStep(3)">Step 3: Actions</button>
-                </div>
-
-                <!-- Status Message -->
-                <div class="status-message" id="statusMessage" style="display: none;">
-                    <p id="statusText"></p>
-                </div>
-
-                <!-- Revisit Buttons -->
-                <div class="revisit-buttons" id="revisitButtons" style="display: none;">
-                    <button class="btn-revisit" onclick="goToStep(1)">Revisit Step 1</button>
-                    <button class="btn-revisit" onclick="goToStep(2)">Revisit Step 2</button>
-                    <button class="btn-revisit" onclick="goToStep(3)">Revisit Step 3</button>
-                </div>
-
-                <!-- Step Sections -->
-                <div class="step-section" id="step1" style="display: none;">
-                    <h3>Step 1: Personal Details</h3>
-                    <p>Let's start by getting to know you.</p>
-                    <div class="button-group">
-                        <button class="btn btn-primary" onclick="collectStep1Data()">Continue</button>
-                        <button class="btn btn-secondary" onclick="skipStep()">Skip This Step</button>
-                    </div>
-                </div>
-
-                <div class="step-section" id="step2" style="display: none;">
-                    <h3>Step 2: Ocean Interests</h3>
-                    <p>Tell us about your ocean interests and preferences.</p>
-                    <div class="button-group">
-                        <button class="btn btn-secondary" onclick="previousStep()">Back</button>
-                        <button class="btn btn-primary" onclick="collectStep2Data()">Continue</button>
-                        <button class="btn btn-secondary" onclick="skipStep()">Skip This Step</button>
-                    </div>
-                </div>
-
-                <div class="step-section" id="step3" style="display: none;">
-                    <h3>Step 3: Goals & Commitments</h3>
-                    <p>What are your goals and long-term commitments?</p>
-                    <div class="button-group">
-                        <button class="btn btn-secondary" onclick="previousStep()">Back</button>
-                        <button class="btn btn-primary" onclick="collectStep3Data()">Complete</button>
-                        <button class="btn btn-secondary" onclick="skipStep()">Skip This Step</button>
-                    </div>
-                </div>
-
-                <!-- Profile Output Section -->
-                <div class="profile-output-section" id="profileOutputSection" style="display: none;">
-                    <h2>Your Profile (Updates Progressively)</h2>
-                    <div class="profile-grid" id="profileContent"></div>
-                    
-                    <div class="confirmation-section" id="confirmationSection" style="display: none;">
-                        <h3>Confirmation</h3>
-                        <p id="confirmationText">When you complete all steps, you'll see a confirmation message here.</p>
+                    <div class="progress-bar">
+                        <div class="progress" id="progressBar"></div>
                     </div>
                 </div>
             </div>
-        </main>
 
-        <footer>
-            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
-            <p>SDG 14 Ocean Conservation Project | 
-                <a href="index.html">Home</a> | 
-                <a href="sitemap.html">Sitemap</a> | 
-                <a href="feedback.html">Contact</a>
-            </p>
-            <p>
-                <a href="page-editors/pageEditorStudent4.html">Page Editor</a> | 
-                <a href="validation/validationPageStudent4.html">Validation</a>
-            </p>
-        </footer>
+            <!-- Step Navigation -->
+            <div class="step-navigation">
+                <span class="steps-label">Steps:</span>
+                <button class="step-btn" id="stepBtn1" onclick="goToStep(1)">Step 1: Basics</button>
+                <button class="step-btn" id="stepBtn2" onclick="goToStep(2)">Step 2: Interests</button>
+                <button class="step-btn" id="stepBtn3" onclick="goToStep(3)">Step 3: Actions</button>
+            </div>
 
-        <script>
-            // Profile data storage with completion status
-            const profileData = {
-                step1: {},
-                step2: {},
-                step3: {}
-            };
+            <!-- Status Message -->
+            <div class="status-message" id="statusMessage" style="display: none;">
+                <p id="statusText"></p>
+            </div>
 
-            const stepStatus = {
-                step1: 'pending', // pending, completed, skipped
-                step2: 'pending',
-                step3: 'pending'
-            };
+            <!-- Revisit Buttons -->
+            <div class="revisit-buttons" id="revisitButtons" style="display: none;">
+                <button class="btn-revisit" onclick="goToStep(1)">Revisit Step 1</button>
+                <button class="btn-revisit" onclick="goToStep(2)">Revisit Step 2</button>
+                <button class="btn-revisit" onclick="goToStep(3)">Revisit Step 3</button>
+            </div>
 
-            let currentStep = 1;
-            let profileStarted = false;
+            <!-- Step Sections -->
+            <div class="step-section" id="step1" style="display: none;">
+                <h3>Step 1: Personal Details</h3>
+                <p>Let's start by getting to know you.</p>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="collectStep1Data()">Continue</button>
+                    <button class="btn btn-secondary" onclick="skipStep()">Skip This Step</button>
+                </div>
+            </div>
 
-            function startOrContinueProfile() {
-                profileStarted = true;
-                currentStep = 1;
+            <div class="step-section" id="step2" style="display: none;">
+                <h3>Step 2: Ocean Interests</h3>
+                <p>Tell us about your ocean interests and preferences.</p>
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="previousStep()">Back</button>
+                    <button class="btn btn-primary" onclick="collectStep2Data()">Continue</button>
+                    <button class="btn btn-secondary" onclick="skipStep()">Skip This Step</button>
+                </div>
+            </div>
+
+            <div class="step-section" id="step3" style="display: none;">
+                <h3>Step 3: Goals & Commitments</h3>
+                <p>What are your goals and long-term commitments?</p>
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="previousStep()">Back</button>
+                    <button class="btn btn-primary" onclick="collectStep3Data()">Complete</button>
+                    <button class="btn btn-secondary" onclick="skipStep()">Skip This Step</button>
+                </div>
+            </div>
+
+            <!-- Profile Output Section -->
+            <div class="profile-output-section" id="profileOutputSection" style="display: none;">
+                <h2>Your Profile (Updates Progressively)</h2>
+                <div class="profile-grid" id="profileContent"></div>
+
+                <div class="confirmation-section" id="confirmationSection" style="display: none;">
+                    <h3>Confirmation</h3>
+                    <p id="confirmationText">When you complete all steps, you'll see a confirmation message here.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Life Below Water. All rights reserved.</p>
+        <p>Yoosuf Husain - 20244063</p>
+        <a href="page-editors/pageEditorStudent4.html">Page Editor</a>
+        <a href="validation/validationPageStudent4.html">Validation</a>
+    </footer>
+
+    <script>
+        // Profile data storage with completion status
+        const profileData = {
+            step1: {},
+            step2: {},
+            step3: {}
+        };
+
+        const stepStatus = {
+            step1: 'pending', // pending, completed, skipped
+            step2: 'pending',
+            step3: 'pending'
+        };
+
+        let currentStep = 1;
+        let profileStarted = false;
+
+        function startOrContinueProfile() {
+            profileStarted = true;
+            currentStep = 1;
+            updateDisplay();
+            document.getElementById('statusMessage').style.display = 'none';
+        }
+
+        function collectStep1Data() {
+            const name = prompt('What is your name?', '');
+            if (name === null) return;
+            const username = prompt('Choose a username (e.g., OceanGuardian):', '');
+            if (username === null) return;
+            const location = prompt('Where are you from?', '');
+            if (location === null) return;
+
+            profileData.step1 = { name, username, location };
+            stepStatus.step1 = 'completed';
+            updateProgressAndDisplay();
+            nextStep();
+        }
+
+        function collectStep2Data() {
+            const interests = prompt('What are your main ocean interests? (e.g., coral reefs, marine animals)', '');
+            if (interests === null) return;
+            const preferredContent = prompt('What type of content interests you? (e.g., videos, articles, infographics)', '');
+            if (preferredContent === null) return;
+            const weeklyTime = prompt('How much time can you dedicate weekly? (e.g., 2-3 hours)', '');
+            if (weeklyTime === null) return;
+
+            profileData.step2 = { interests, preferredContent, weeklyTime };
+            stepStatus.step2 = 'completed';
+            updateProgressAndDisplay();
+            nextStep();
+        }
+
+        function collectStep3Data() {
+            const primaryGoal = prompt('What is your primary goal? (e.g., reduce plastic use, learn about marine ecosystems)', '');
+            if (primaryGoal === null) return;
+            const task = prompt('What specific task will you complete this month?', '');
+            if (task === null) return;
+            const commitment = prompt('How are you committed to ocean conservation? (e.g., long-term, short-term)', '');
+            if (commitment === null) return;
+
+            profileData.step3 = { primaryGoal, task, commitment };
+            stepStatus.step3 = 'completed';
+            updateProgressAndDisplay();
+            checkAllStepsComplete();
+        }
+
+        function nextStep() {
+            if (currentStep < 3) {
+                currentStep++;
                 updateDisplay();
-                document.getElementById('statusMessage').style.display = 'none';
             }
+        }
 
-            function collectStep1Data() {
-                const name = prompt('What is your name?', '');
-                if (name === null) return;
-                const username = prompt('Choose a username (e.g., OceanGuardian):', '');
-                if (username === null) return;
-                const location = prompt('Where are you from?', '');
-                if (location === null) return;
-
-                profileData.step1 = { name, username, location };
-                stepStatus.step1 = 'completed';
-                updateProgressAndDisplay();
-                nextStep();
-            }
-
-            function collectStep2Data() {
-                const interests = prompt('What are your main ocean interests? (e.g., coral reefs, marine animals)', '');
-                if (interests === null) return;
-                const preferredContent = prompt('What type of content interests you? (e.g., videos, articles, infographics)', '');
-                if (preferredContent === null) return;
-                const weeklyTime = prompt('How much time can you dedicate weekly? (e.g., 2-3 hours)', '');
-                if (weeklyTime === null) return;
-
-                profileData.step2 = { interests, preferredContent, weeklyTime };
-                stepStatus.step2 = 'completed';
-                updateProgressAndDisplay();
-                nextStep();
-            }
-
-            function collectStep3Data() {
-                const primaryGoal = prompt('What is your primary goal? (e.g., reduce plastic use, learn about marine ecosystems)', '');
-                if (primaryGoal === null) return;
-                const task = prompt('What specific task will you complete this month?', '');
-                if (task === null) return;
-                const commitment = prompt('How are you committed to ocean conservation? (e.g., long-term, short-term)', '');
-                if (commitment === null) return;
-
-                profileData.step3 = { primaryGoal, task, commitment };
-                stepStatus.step3 = 'completed';
-                updateProgressAndDisplay();
-                checkAllStepsComplete();
-            }
-
-            function nextStep() {
-                if (currentStep < 3) {
-                    currentStep++;
-                    updateDisplay();
-                }
-            }
-
-            function previousStep() {
-                if (currentStep > 1) {
-                    currentStep--;
-                    updateDisplay();
-                }
-            }
-
-            function skipStep() {
-                stepStatus[`step${currentStep}`] = 'skipped';
-                updateProgressAndDisplay();
-                nextStep();
-            }
-
-            function goToStep(stepNum) {
-                currentStep = stepNum;
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
                 updateDisplay();
-                document.getElementById('statusMessage').style.display = 'none';
+            }
+        }
+
+        function skipStep() {
+            stepStatus[`step${currentStep}`] = 'skipped';
+            updateProgressAndDisplay();
+            nextStep();
+        }
+
+        function goToStep(stepNum) {
+            currentStep = stepNum;
+            updateDisplay();
+            document.getElementById('statusMessage').style.display = 'none';
+        }
+
+        function updateDisplay() {
+            // Hide all steps
+            document.querySelectorAll('.step-section').forEach(step => {
+                step.style.display = 'none';
+            });
+
+            // Show current step if profile has started
+            if (profileStarted) {
+                document.getElementById(`step${currentStep}`).style.display = 'block';
             }
 
-            function updateDisplay() {
-                // Hide all steps
-                document.querySelectorAll('.step-section').forEach(step => {
-                    step.style.display = 'none';
-                });
+            updateStepButtons();
+        }
 
-                // Show current step if profile has started
-                if (profileStarted) {
-                    document.getElementById(`step${currentStep}`).style.display = 'block';
-                }
-
-                updateStepButtons();
-            }
-
-            function updateStepButtons() {
-                for (let i = 1; i <= 3; i++) {
-                    const btn = document.getElementById(`stepBtn${i}`);
-                    if (stepStatus[`step${i}`] === 'completed') {
-                        btn.style.backgroundColor = '#0160C9';
-                        btn.style.color = 'white';
-                    } else if (stepStatus[`step${i}`] === 'skipped') {
-                        btn.style.backgroundColor = '#e0e0e0';
-                        btn.style.color = '#666';
-                    } else {
-                        btn.style.backgroundColor = '#f0f0f0';
-                        btn.style.color = '#333';
-                    }
-                }
-            }
-
-            function updateProgressAndDisplay() {
-                updateProgressBar();
-                updateProfileOutput();
-                updateRevisitButtons();
-                updateStatusMessage();
-            }
-
-            function updateProgressBar() {
-                const completedSteps = Object.values(stepStatus).filter(status => status === 'completed').length;
-                const totalPrompts = 9; // 3 prompts per step
-                const completedPrompts = completedSteps * 3;
-                const progressPercentage = (completedPrompts / totalPrompts) * 100;
-
-                document.getElementById('progressBar').style.width = `${progressPercentage}%`;
-                document.getElementById('completionPercentage').textContent = Math.round(progressPercentage);
-                document.getElementById('promptCount').textContent = `(${completedPrompts} of ${totalPrompts} prompts completed)`;
-            }
-
-            function updateRevisitButtons() {
-                const hasSkipped = Object.values(stepStatus).includes('skipped');
-                const hasAnyData = Object.values(stepStatus).some(status => status === 'completed' || status === 'skipped');
-                
-                if (hasAnyData) {
-                    document.getElementById('revisitButtons').style.display = 'flex';
-                }
-            }
-
-            function updateStatusMessage() {
-                const completedSteps = Object.values(stepStatus).filter(status => status === 'completed').length;
-                const skippedSteps = Object.values(stepStatus).filter(status => status === 'skipped').length;
-                const progressPercentage = Math.round((completedSteps * 3 / 9) * 100);
-
-                if (completedSteps > 0 || skippedSteps > 0) {
-                    const statusText = `Status: Saved. Completion is now ${progressPercentage}%. You may continue or revisit any step.`;
-                    document.getElementById('statusText').textContent = statusText;
-                    document.getElementById('statusMessage').style.display = 'block';
-                }
-            }
-
-            function updateProfileOutput() {
-                const profileSection = document.getElementById('profileOutputSection');
-                profileSection.style.display = 'block';
-
-                let profileHTML = '';
-
-                if (stepStatus.step1 === 'completed' || stepStatus.step2 === 'completed') {
-                    profileHTML += '<div class="profile-grid">';
-                    
-                    if (stepStatus.step1 === 'completed') {
-                        profileHTML += '<div class="profile-card"><h3>Step 1: Basics</h3>';
-                        profileHTML += '<p><strong>Name:</strong> ' + (profileData.step1.name || 'N/A') + '</p>';
-                        profileHTML += '<p><strong>Username:</strong> ' + (profileData.step1.username || 'N/A') + '</p>';
-                        profileHTML += '<p><strong>Local area:</strong> ' + (profileData.step1.location || 'N/A') + '</p>';
-                        profileHTML += '</div>';
-                    }
-                    
-                    if (stepStatus.step2 === 'completed') {
-                        profileHTML += '<div class="profile-card"><h3>Step 2: Interests</h3>';
-                        profileHTML += '<p><strong>SDG interest:</strong> ' + (profileData.step2.interests || 'N/A') + '</p>';
-                        profileHTML += '<p><strong>Preferred content:</strong> ' + (profileData.step2.preferredContent || 'N/A') + '</p>';
-                        profileHTML += '<p><strong>Weekly time:</strong> ' + (profileData.step2.weeklyTime || 'N/A') + '</p>';
-                        profileHTML += '</div>';
-                    }
-                    
-                    profileHTML += '</div>';
-                }
-
-                if (stepStatus.step3 === 'completed') {
-                    profileHTML += '<div class="profile-card"><h3>Step 3: Actions</h3>';
-                    profileHTML += '<p><strong>Primary Goal:</strong> ' + (profileData.step3.primaryGoal || 'N/A') + '</p>';
-                    profileHTML += '<p><strong>Task This Month:</strong> ' + (profileData.step3.task || 'N/A') + '</p>';
-                    profileHTML += '<p><strong>Commitment Level:</strong> ' + (profileData.step3.commitment || 'N/A') + '</p>';
-                    profileHTML += '</div>';
-                }
-
-                document.getElementById('profileContent').innerHTML = profileHTML;
-            }
-
-            function checkAllStepsComplete() {
-                const allCompleted = Object.values(stepStatus).every(status => status === 'completed');
-                if (allCompleted) {
-                    showConfirmation();
-                }
-            }
-
-            function showConfirmation() {
-                const confirmSection = document.getElementById('confirmationSection');
-                const confirmText = document.getElementById('confirmationText');
-                confirmText.textContent = '🎉 Perfect! You have successfully completed your Ocean Profile. Thank you for sharing your information with us!';
-                confirmSection.style.display = 'block';
-            }
-
-            function restartProfile() {
-                currentStep = 1;
-                profileStarted = false;
-                profileData.step1 = {};
-                profileData.step2 = {};
-                profileData.step3 = {};
-                stepStatus.step1 = 'pending';
-                stepStatus.step2 = 'pending';
-                stepStatus.step3 = 'pending';
-                
-                document.getElementById('profileOutputSection').style.display = 'none';
-                document.getElementById('statusMessage').style.display = 'none';
-                document.getElementById('revisitButtons').style.display = 'none';
-                
-                document.getElementById('completionPercentage').textContent = '0';
-                document.getElementById('promptCount').textContent = '(0 of 9 prompts completed)';
-                document.getElementById('progressBar').style.width = '0%';
-                updateStepButtons();
-                
-                document.querySelectorAll('.step-section').forEach(step => {
-                    step.style.display = 'none';
-                });
-            }
-
-            // Sticky navigation
-            const stickyNav = document.querySelector('.sticky-nav');
-            const header = document.querySelector('header');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > header.offsetHeight - 80) {
-                    stickyNav.classList.add('visible');
+        function updateStepButtons() {
+            for (let i = 1; i <= 3; i++) {
+                const btn = document.getElementById(`stepBtn${i}`);
+                if (stepStatus[`step${i}`] === 'completed') {
+                    btn.style.backgroundColor = '#0160C9';
+                    btn.style.color = 'white';
+                } else if (stepStatus[`step${i}`] === 'skipped') {
+                    btn.style.backgroundColor = '#e0e0e0';
+                    btn.style.color = '#666';
                 } else {
-                    stickyNav.classList.remove('visible');
+                    btn.style.backgroundColor = '#f0f0f0';
+                    btn.style.color = '#333';
                 }
-            });
+            }
+        }
 
-            // Set active navigation on page load
-            document.addEventListener('DOMContentLoaded', () => {
-                const profileBtns = document.querySelectorAll('.profile-btn');
-                profileBtns.forEach(btn => {
-                    btn.classList.add('active');
-                });
+        function updateProgressAndDisplay() {
+            updateProgressBar();
+            updateProfileOutput();
+            updateRevisitButtons();
+            updateStatusMessage();
+        }
+
+        function updateProgressBar() {
+            const completedSteps = Object.values(stepStatus).filter(status => status === 'completed').length;
+            const totalPrompts = 9; // 3 prompts per step
+            const completedPrompts = completedSteps * 3;
+            const progressPercentage = (completedPrompts / totalPrompts) * 100;
+
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+            document.getElementById('completionPercentage').textContent = Math.round(progressPercentage);
+            document.getElementById('promptCount').textContent = `(${completedPrompts} of ${totalPrompts} prompts completed)`;
+        }
+
+        function updateRevisitButtons() {
+            const hasSkipped = Object.values(stepStatus).includes('skipped');
+            const hasAnyData = Object.values(stepStatus).some(status => status === 'completed' || status === 'skipped');
+
+            if (hasAnyData) {
+                document.getElementById('revisitButtons').style.display = 'flex';
+            }
+        }
+
+        function updateStatusMessage() {
+            const completedSteps = Object.values(stepStatus).filter(status => status === 'completed').length;
+            const skippedSteps = Object.values(stepStatus).filter(status => status === 'skipped').length;
+            const progressPercentage = Math.round((completedSteps * 3 / 9) * 100);
+
+            if (completedSteps > 0 || skippedSteps > 0) {
+                const statusText = `Status: Saved. Completion is now ${progressPercentage}%. You may continue or revisit any step.`;
+                document.getElementById('statusText').textContent = statusText;
+                document.getElementById('statusMessage').style.display = 'block';
+            }
+        }
+
+        function updateProfileOutput() {
+            const profileSection = document.getElementById('profileOutputSection');
+            profileSection.style.display = 'block';
+
+            let profileHTML = '';
+
+            if (stepStatus.step1 === 'completed' || stepStatus.step2 === 'completed') {
+                profileHTML += '<div class="profile-grid">';
+
+                if (stepStatus.step1 === 'completed') {
+                    profileHTML += '<div class="profile-card"><h3>Step 1: Basics</h3>';
+                    profileHTML += '<p><strong>Name:</strong> ' + (profileData.step1.name || 'N/A') + '</p>';
+                    profileHTML += '<p><strong>Username:</strong> ' + (profileData.step1.username || 'N/A') + '</p>';
+                    profileHTML += '<p><strong>Local area:</strong> ' + (profileData.step1.location || 'N/A') + '</p>';
+                    profileHTML += '</div>';
+                }
+
+                if (stepStatus.step2 === 'completed') {
+                    profileHTML += '<div class="profile-card"><h3>Step 2: Interests</h3>';
+                    profileHTML += '<p><strong>SDG interest:</strong> ' + (profileData.step2.interests || 'N/A') + '</p>';
+                    profileHTML += '<p><strong>Preferred content:</strong> ' + (profileData.step2.preferredContent || 'N/A') + '</p>';
+                    profileHTML += '<p><strong>Weekly time:</strong> ' + (profileData.step2.weeklyTime || 'N/A') + '</p>';
+                    profileHTML += '</div>';
+                }
+
+                profileHTML += '</div>';
+            }
+
+            if (stepStatus.step3 === 'completed') {
+                profileHTML += '<div class="profile-card"><h3>Step 3: Actions</h3>';
+                profileHTML += '<p><strong>Primary Goal:</strong> ' + (profileData.step3.primaryGoal || 'N/A') + '</p>';
+                profileHTML += '<p><strong>Task This Month:</strong> ' + (profileData.step3.task || 'N/A') + '</p>';
+                profileHTML += '<p><strong>Commitment Level:</strong> ' + (profileData.step3.commitment || 'N/A') + '</p>';
+                profileHTML += '</div>';
+            }
+
+            document.getElementById('profileContent').innerHTML = profileHTML;
+        }
+
+        function checkAllStepsComplete() {
+            const allCompleted = Object.values(stepStatus).every(status => status === 'completed');
+            if (allCompleted) {
+                showConfirmation();
+            }
+        }
+
+        function showConfirmation() {
+            const confirmSection = document.getElementById('confirmationSection');
+            const confirmText = document.getElementById('confirmationText');
+            confirmText.textContent = '🎉 Perfect! You have successfully completed your Ocean Profile. Thank you for sharing your information with us!';
+            confirmSection.style.display = 'block';
+        }
+
+        function restartProfile() {
+            currentStep = 1;
+            profileStarted = false;
+            profileData.step1 = {};
+            profileData.step2 = {};
+            profileData.step3 = {};
+            stepStatus.step1 = 'pending';
+            stepStatus.step2 = 'pending';
+            stepStatus.step3 = 'pending';
+
+            document.getElementById('profileOutputSection').style.display = 'none';
+            document.getElementById('statusMessage').style.display = 'none';
+            document.getElementById('revisitButtons').style.display = 'none';
+
+            document.getElementById('completionPercentage').textContent = '0';
+            document.getElementById('promptCount').textContent = '(0 of 9 prompts completed)';
+            document.getElementById('progressBar').style.width = '0%';
+            updateStepButtons();
+
+            document.querySelectorAll('.step-section').forEach(step => {
+                step.style.display = 'none';
             });
-        </script>
-    </body>
+        }
+
+        // Sticky navigation
+        const stickyNav = document.querySelector('.sticky-nav');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight - 80) {
+                stickyNav.classList.add('visible');
+            } else {
+                stickyNav.classList.remove('visible');
+            }
+        });
+
+        // Set active navigation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const profileBtns = document.querySelectorAll('.profile-btn');
+            profileBtns.forEach(btn => {
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
 </html>

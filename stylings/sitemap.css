@@ -1,6 +1,91 @@
-/* Sitemap Page Styles - Basic Hierarchy */
+/* Sitemap Page Style */
 
-/* SVG Sitemap Container */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sitemap-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.sitemap-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+
+.sitemap-container svg {
+    min-width: 100%;
+    height: auto;
+    max-width: 1100px;
+}
+
+
+.node-rect {
+    fill: #0160C9;
+    stroke: #0D85D8;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+.node-rect:hover,
+.node-rect:focus {
+    fill: #0D85D8;
+    stroke: #3ACBE8;
+    stroke-width: 3;
+}
+
+
+.node-rect--current {
+    fill: #3ACBE8;
+    stroke: #ffffff;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 8px rgba(58, 203, 232, 0.7));
+}
+
+.node-text {
+    fill: #ffffff;
+    font-size: 14px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.node-link {
+    cursor: pointer;
+}
+
+.node-link:focus {
+    outline: 2px solid #3ACBE8;
+    outline-offset: 3px;
+}
+
+.connector-line {
+    stroke: #0160C9;
+    stroke-width: 2;
+    fill: none;
+}
+
+.legend {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+
 .sitemap-card {
     padding: 50px 40px;
     display: flex;
@@ -17,7 +102,7 @@
     margin: 0 auto;
 }
 
-/* SVG Node Styles - Main Pages */
+
 .svg-node {
     fill: #6e9cf8;
     stroke: #4f7eea;
@@ -32,7 +117,7 @@
     filter: drop-shadow(0 2px 6px rgba(110, 156, 248, 0.5));
 }
 
-/* HOME node - special styling */
+
 .svg-home {
     fill: #5e8fe8;
     stroke: #4f7eea;
@@ -45,7 +130,7 @@
     filter: drop-shadow(0 2px 8px rgba(110, 156, 248, 0.6));
 }
 
-/* Current Page (Sitemap) Highlight */
+
 .svg-current {
     fill: #6e9cf8;
     stroke: #4f7eea;
@@ -53,7 +138,7 @@
     filter: drop-shadow(0 0 5px rgba(110, 156, 248, 0.4));
 }
 
-/* Content Pages - Slightly Different Shade */
+
 .svg-content {
     fill: #5e8fe8;
     stroke: #4f7eea;
@@ -65,14 +150,14 @@
     filter: drop-shadow(0 2px 6px rgba(110, 156, 248, 0.5));
 }
 
-/* SVG Line Connectors */
+
 .svg-line {
     stroke: #6e9cf8;
     stroke-width: 2;
     fill: none;
 }
 
-/* SVG Text Labels */
+
 .svg-label {
     fill: #ffffff;
     font-size: 0.9rem;
@@ -84,7 +169,7 @@
     user-select: none;
 }
 
-/* SVG Section Header (CONTENT PAGES) */
+
 .svg-header {
     fill: #6e9cf8;
     font-size: 0.85rem;
@@ -96,14 +181,14 @@
     user-select: none;
 }
 
-/* SVG Link Focus State for Accessibility */
+
 svg a:focus rect {
     stroke: #ffffff;
     stroke-width: 4;
     filter: drop-shadow(0 0 8px rgba(110, 156, 248, 0.7));
 }
 
-/* Sitemap Caption */
+
 .sitemap-caption {
     font-size: 0.9rem;
     color: #ededed;
@@ -117,31 +202,4 @@ svg a:focus rect {
 .sitemap-caption strong {
     color: #ffffff;
     font-weight: 600;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sitemap-card {
-        padding: 40px 20px;
-    }
-
-    .sitemap-svg {
-        min-height: 500px;
-    }
-
-    .svg-label {
-        font-size: 0.8rem;
-    }
-
-    .svg-header {
-        font-size: 0.75rem;
-    }
-
-    .svg-node {
-        stroke-width: 1.5;
-    }
-
-    .svg-line {
-        stroke-width: 1.5;
-    }
 }

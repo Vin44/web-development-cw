@@ -1,199 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Life Below Water</title>
-        <link rel="stylesheet" href="../stylings/globalStyle.css">
-        <link rel="stylesheet" href="../stylings/validations/validationStudent4.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
-                <img src="../images/logo.png" alt="Website Logo">
-                <h1 class="website-title">
-                    <span class="op">OceanPulse:</span>
-                    <span class="life">LIFE</span>
-                    <span class="below">BELOW</span>
-                    <span class="water">WATER</span>
-                </h1>
-            </div>
-            <nav>
-                <ul> <!-- this is the navigation bar that appears at the top of the page -->
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../gallery.html">Gallery</a></li>
-                    <li><a href="../simulator.html">Action Impact Simulator</a></li>
-                    <li><a href="../feedback.html">Feedback</a></li>
-                    <li><a href="../teamPage.html">Our Team</a></li>
-                    <li><a href="../sitemap.html">Site Map</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
-            <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
-            <h2 class="sticky-title">
-                <span class="op-span">OceanPulse:</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation - Life Below Water</title>
+    <link rel="stylesheet" href="../stylings/globalStyle.css">
+    <link rel="stylesheet" href="../stylings/validations/validationStudent4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="Website Logo">
+            <h1 class="website-title">
+                <span class="op">OceanPulse:</span>
                 <span class="life">LIFE</span>
-                <span class="below"> BELOW</span>
-                <span class="water"> WATER</span>
-            </h2>
-            <nav>
-                <ul>
+                <span class="below">BELOW</span>
+                <span class="water">WATER</span>
+            </h1>
+        </div>
+        <nav>
+            <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../gallery.html">Gallery</a></li>
                 <li><a href="../simulator.html">Action Impact Simulator</a></li>
-                <li><a href="../userProfile.html">User Profile</a></li>
                 <li><a href="../feedback.html">Feedback</a></li>
                 <li><a href="../teamPage.html">Our Team</a></li>
                 <li><a href="../sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sticky-nav">
+        <img src="../images/logo.png" alt="sticky logo" class="sticky-logo">
+        <h2 class="sticky-title">
+            <span class="op-span">OceanPulse:</span>
+            <span class="life">LIFE</span>
+            <span class="below"> BELOW</span>
+            <span class="water"> WATER</span>
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../simulator.html">Action Impact Simulator</a></li>
+                <li><a href="../feedback.html">Feedback</a></li>
+                <li><a href="../teamPage.html">Our Team</a></li>
+                <li><a href="../sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="validation">
+            <h1>Validation &amp; Page Analysis</h1>
+
+            <!-- SITE MAP PAGE -->
+            <div class="card val1-card">
+                <h2>Site Map Page</h2>
+
+                <p>
+                    The Site Map page displays the full hierarchy of the website using an interactive
+                    SVG diagram. Users can click on any node to navigate directly to that page.
+                </p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Interactive SVG-based sitemap with clickable nodes</li>
+                    <li>Hover effects on nodes for better user interaction</li>
+                    <li>Keyboard accessible navigation using tabindex</li>
+                    <li>Legend section explaining the website structure</li>
                 </ul>
-            </nav>
-        </div>
 
-        <main>
-            <section class="validation">
-                <h1>Validation & Page Analysis</h1>
+                <h3>HTML Validation</h3>
+                <p>
+                    The Site Map page was validated using the W3C Markup Validator. The page uses
+                    proper HTML5 structure with semantic elements. No errors were found.
+                </p>
 
-                <!-- SPLASH SCREEN -->
-<div class="card val1-card">
-    <h2>Splash Screen</h2>
+                <figure class="val-screenshot">
+                    <img src="../images/validations/validationStudent4/sitemapHTML.png"
+                        alt="W3C HTML Validation result for Site Map Page">
+                    <figcaption>W3C Nu HTML Checker — Site Map Page passed with no errors or warnings.</figcaption>
+                </figure>
 
-    <p>
-        The Splash Screen serves as the initial entry point of the website, providing users with 
-        an engaging introduction to the “Life Below Water” theme. It visually presents the branding 
-        and automatically redirects users to the main home page after a short duration.
-    </p>
+                <h3>CSS Validation</h3>
+                <p>
+                    The CSS for the Site Map page was validated using the W3C CSS Validator. All
+                    styles follow correct syntax including SVG styling and hover transitions.
+                </p>
 
-    <h3>Key Features</h3>
-    <ul>
-        <li>Animated introduction screen using CSS effects</li>
-        <li>Automatic redirection implemented with JavaScript</li>
-        <li>Consistent theme design with logo and colors</li>
-        <li>Responsive layout for different screen sizes</li>
-    </ul>
+                <figure class="val-screenshot">
+                    <img src="../images/validations/validationStudent4/sitemapCSS.png"
+                        alt="W3C CSS Validation result for Site Map Page">
+                    <figcaption>W3C CSS Validator — Site Map Page passed with no errors or warnings.</figcaption>
+                </figure>
+            </div>
 
-    <h3>HTML Validation</h3>
-    <p>
-        The Splash Screen HTML was validated using the W3C Markup Validator. The page follows 
-        correct HTML5 structure with properly nested elements. No critical errors were found.
-    </p>
+            <!-- USER PROFILE PAGE -->
+            <div class="card val1-card">
+                <h2>User Profile Page</h2>
 
-    <figure class="val-screenshot">
-        <img src="../images/validations/validationStudent2/splashHTML.png" alt="W3C HTML Validation result for Splash Screen">
-        <figcaption>W3C Nu HTML Checker — Splash Screen passed with no errors or warnings.</figcaption>
-    </figure>
+                <p>
+                    The User Profile page allows users to build their profile progressively
+                    using JavaScript prompts. Users can complete steps, skip questions, and
+                    revisit steps to update their information.
+                </p>
 
-    <h3>CSS Validation</h3>
-    <p>
-        The CSS used for the Splash Screen was validated successfully. Animations and styling 
-        follow correct syntax, ensuring smooth visual effects and responsiveness across devices.
-    </p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Progressive profile building using JavaScript prompts</li>
+                    <li>Step navigation with skip and revisit options</li>
+                    <li>Dynamic progress bar showing completion percentage</li>
+                    <li>Profile output section that updates in real time</li>
+                </ul>
 
-    <figure class="val-screenshot">
-        <img src="../images/validations/validationStudent2/splashCSS.png" alt="W3C CSS Validation result for Splash Screen">
-        <figcaption>W3C CSS Validator — Splash Screen passed with no errors or warnings.</figcaption>
-    </figure>
-</div>
+                <h3>HTML Validation</h3>
+                <p>
+                    The User Profile page HTML was validated using the W3C Markup Validator.
+                    The page follows correct HTML5 structure with proper use of semantic
+                    elements. No errors were found.
+                </p>
 
-                <!-- ACTION IMPACT SIMULATOR -->
-<div class="card val1-card">
-    <h2>Action Impact Simulator</h2>
+                <figure class="val-screenshot">
+                    <img src="../images/validations/validationStudent4/userProfileHTML.png"
+                        alt="W3C HTML Validation result for User Profile Page">
+                    <figcaption>W3C Nu HTML Checker — User Profile Page passed with no errors or warnings.</figcaption>
+                </figure>
 
-    <p>
-        The Action Impact Simulator is an interactive feature that allows users to explore how 
-        different human activities affect marine ecosystems. Users can select actions and instantly 
-        view their environmental impact, helping to raise awareness about ocean conservation.
-    </p>
+                <h3>CSS Validation</h3>
+                <p>
+                    The CSS for the User Profile page was validated successfully. Styling rules
+                    for the profile cards, buttons, and progress bar follow correct syntax.
+                </p>
 
-    <h3>Key Features</h3>
-    <ul>
-        <li>Interactive user inputs (buttons and selections)</li>
-        <li>Dynamic updates using JavaScript</li>
-        <li>Real-time feedback based on user choices</li>
-        <li>Engaging and user-friendly interface</li>
-    </ul>
+                <figure class="val-screenshot">
+                    <img src="../images/validations/validationStudent4/userProfileCSS.png"
+                        alt="W3C CSS Validation result for User Profile Page">
+                    <figcaption>W3C CSS Validator — User Profile Page passed with no errors or warnings.</figcaption>
+                </figure>
+            </div>
 
-    <h3>HTML Validation & CSS</h3>
-    <p>
-        Since the simulator page contains internal CSS, W#C Nu HTML checker checked both HTML & CSS in one page.
-        The Simulator page HTML was validated using W3C standards and follows proper HTML5 structure. 
-        Semantic elements and correct nesting ensure accessibility and maintainability.
-        And also CSS for the Simulator page was also validated and includes layout styling, transitions, 
-        and responsive design. All styles follow correct syntax with no major issues.
-    </p>
+            <!-- CONTENT PAGE STUDENT 4 -->
+            <div class="card val1-card">
+                <h2>Content Page (Student 4)</h2>
 
-    <figure class="val-screenshot">
-        <img src="../images/validations/validationStudent2/simulatorHTMLandCSS.png" alt="W3C HTML Validation result for Simulator">
-        <figcaption>W3C Nu HTML Checker — Simulator page passed with no errors or warnings.</figcaption>
-    </figure>
+                <p>
+                    This content page focuses on marine biodiversity, covering critical
+                    ecosystems, endangered species, threats, and conservation efforts.
+                    The page uses internal navigation for easy browsing between sections.
+                </p>
 
-</div>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Internal navigation with anchor links</li>
+                    <li>Structured sections covering ecosystems, species, threats, and protection</li>
+                    <li>Go-to-top button for quick navigation</li>
+                    <li>Sticky navigation bar for improved usability</li>
+                </ul>
 
-                <!-- CONTENT PAGE -->
-<div class="card val1-card">
-    <h2>Content Page (Student 2)</h2>
+                <h3>HTML Validation</h3>
+                <p>
+                    The Content Page HTML was validated using the W3C Markup Validator.
+                    The page uses proper heading hierarchy and semantic structure. No
+                    validation errors were found.
+                </p>
 
-    <p>
-        This content page focuses on the importance of protecting life below water by highlighting 
-        ocean threats, solutions, and the positive impact of conservation efforts. The page is 
-        structured into clear sections to improve readability and user navigation.
-    </p>
+                <figure class="val-screenshot">
+                    <img src="../images/validations/validationStudent4/contentPageHTML.png"
+                        alt="W3C HTML Validation result for Content Page">
+                    <figcaption>W3C Nu HTML Checker — Content Page passed with no errors or warnings.</figcaption>
+                </figure>
 
-    <h3>Key Features</h3>
-    <ul>
-        <li>Quick navigation bar with anchor links for smooth scrolling</li>
-        <li>Well-organized sections (Introduction, Threats, Solutions, Impact, Conclusion)</li>
-        <li>Use of images and video to enhance user engagement</li>
-        <li>Sticky navigation bar for improved usability</li>
-    </ul>
+                <h3>CSS Validation</h3>
+                <p>
+                    The CSS for the Content Page was validated using the W3C CSS Validator.
+                    All styling rules follow correct syntax and enhance the visual presentation.
+                </p>
 
-    <h3>HTML & CSS Validation</h3>
-    <p>
-        Since the simulator page contains internal CSS, W#C Nu HTML checker checked both HTML & CSS in one page.
-        The Content Page HTML was validated using the W3C Markup Validator. The page follows proper 
-        HTML5 structure, including semantic elements such as header, nav, main, section, and footer. 
-        All elements are correctly nested and no validation errors were found.
-        And also the CSS for this page was validated using the W3C CSS Validator. The styling includes layout 
-        design, typography, hover effects, and responsive adjustments. All CSS rules follow correct 
-        syntax, ensuring consistency and readability across different devices.
-    </p>
+                <figure class="val-screenshot">
+                    <img src="../images/validations/validationStudent4/contentPageCSS.png"
+                        alt="W3C CSS Validation result for Content Page">
+                    <figcaption>W3C CSS Validator — Content Page passed with no errors or warnings.</figcaption>
+                </figure>
+            </div>
+        </section>
 
-    <figure class="val-screenshot">
-        <img src="../images/validations/validationStudent2/contentStudent2.png" alt="W3C HTML Validation result for Content Page">
-        <figcaption>W3C Nu HTML Checker — Content Page passed with no errors or warnings.</figcaption>
-    </figure>
+    </main>
 
-</div>
-            </section>
+    <footer>
+        <p>&copy; 2026 Life Below Water. All rights reserved.</p>
+        <p>Yoosuf Husain - 20244063</p>
+        <a href="../page-editors/pageEditorStudent4.html">Page Editor</a>
+        <a href="validationPageStudent4.html">Validation</a>
+    </footer>
 
-        </main>
+    <script>
+        const stickyNav = document.querySelector('.sticky-nav');
+        const header = document.querySelector('header');
 
-        <footer>
-            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
-            <p>Vinindu Wickramasinghe - 20244059</p>
-            <a href="page-editors/pageEditorStudent1.html">Page Editor</a>
-        <a href="validation/validationPageStudent1.html">Validation</a>
-        </footer>
-
-
-        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
-        <script> 
-            const stickyNav = document.querySelector('.sticky-nav');
-            const header = document.querySelector('header');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > header.offsetHeight - 80) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight - 80) {
                 stickyNav.classList.add('visible');
-                } else {
+            } else {
                 stickyNav.classList.remove('visible');
-                }
-            });
-        </script>
+            }
+        });
+    </script>
 
+</body>
 
-    </body>
 </html>
