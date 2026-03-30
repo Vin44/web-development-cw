@@ -279,22 +279,167 @@
         </p>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Life Below Water. All rights reserved.</p>
-        <p>Yoosuf Husain 20244063</p>
-        <a href="page-editors/pageEditorStudent4.html">Page Editor</a>
-        <a href="validation/validationPageStudent4.html">Validation</a>
-    </footer>
+        <main>
+            <h2 class="sitemap-title">Website Sitemap</h2>
+            
+            <div class="sitemap-container">
+                <svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Website hierarchy sitemap">
+                    <defs>
+                        <style>
+                            .sitemap-node:focus { outline: 2px solid #3ACBE8; }
+                        </style>
+                    </defs>
 
-    <script>
-        var stickyNav = document.getElementById('stickyNav');
-        window.onscroll = function() {
-            if (window.pageYOffset > 400) {
-                stickyNav.className = 'sticky-nav visible';
-            } else {
-                stickyNav.className = 'sticky-nav';
-            }
-        };
-    </script>
-</body>
+                    <!-- HOME (Top Level) -->
+                    <line class="connector-line" x1="500" y1="30" x2="500" y2="70" aria-hidden="true"/>
+                    <a href="index.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Home Page - Main Landing Page</title>
+                            <rect class="node-rect" x="420" y="70" width="160" height="50" />
+                            <text class="node-text" x="500" y="97">HOME</text>
+                        </g>
+                    </a>
+
+                    <!-- Two branches from HOME -->
+                    <!-- Upper branch: Main Pages -->
+                    <line class="connector-line" x1="500" y1="120" x2="500" y2="150" aria-hidden="true"/>
+                    <line class="connector-line" x1="100" y1="150" x2="900" y2="150" aria-hidden="true"/>
+
+                    <!-- Main Pages -->
+                    <!-- Gallery -->
+                    <line class="connector-line" x1="120" y1="150" x2="120" y2="190" aria-hidden="true"/>
+                    <a href="gallery.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Gallery - View Ocean and Marine Images</title>
+                            <rect class="node-rect" x="40" y="190" width="160" height="50" />
+                            <text class="node-text" x="120" y="217">GALLERY</text>
+                        </g>
+                    </a>
+
+                    <!-- Simulator -->
+                    <line class="connector-line" x1="280" y1="150" x2="280" y2="190" aria-hidden="true"/>
+                    <a href="simulator.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Action Impact Simulator - Interactive Tool</title>
+                            <rect class="node-rect" x="200" y="190" width="160" height="50" />
+                            <text class="node-text" x="280" y="217">SIMULATOR</text>
+                        </g>
+                    </a>
+
+                    <!-- Feedback -->
+                    <line class="connector-line" x1="440" y1="150" x2="440" y2="190" aria-hidden="true"/>
+                    <a href="feedback.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Feedback - Send Us Your Feedback</title>
+                            <rect class="node-rect" x="360" y="190" width="160" height="50" />
+                            <text class="node-text" x="440" y="217">FEEDBACK</text>
+                        </g>
+                    </a>
+
+                    <!-- Team Page -->
+                    <line class="connector-line" x1="600" y1="150" x2="600" y2="190" aria-hidden="true"/>
+                    <a href="teamPage.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Our Team - Meet the Team Members</title>
+                            <rect class="node-rect" x="520" y="190" width="160" height="50" />
+                            <text class="node-text" x="600" y="217">OUR TEAM</text>
+                        </g>
+                    </a>
+
+                    <!-- Sitemap -->
+                    <line class="connector-line" x1="880" y1="150" x2="880" y2="190" aria-hidden="true"/>
+                    <a href="sitemap.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Sitemap - Current Page (Website Structure)</title>
+                            <rect class="node-rect" x="800" y="190" width="160" height="50" />
+                            <text class="node-text" x="880" y="217">SITEMAP</text>
+                        </g>
+                    </a>
+
+                    <!-- Lower branch: Content Pages (direct from HOME) -->
+                    <line class="connector-line" x1="500" y1="120" x2="500" y2="310" aria-hidden="true"/>
+                    <line class="connector-line" x1="200" y1="310" x2="800" y2="310" aria-hidden="true"/>
+
+                    <!-- Content Pages -->
+                    <!-- Content 1 -->
+                    <line class="connector-line" x1="280" y1="310" x2="280" y2="350" aria-hidden="true"/>
+                    <a href="contentPages/contentPageStudent1.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Content Page 1 - Saving Coral Reefs</title>
+                            <rect class="node-rect" x="200" y="350" width="160" height="50" />
+                            <text class="node-text" x="280" y="377">CONTENT 1</text>
+                        </g>
+                    </a>
+
+                    <!-- Content 2 -->
+                    <line class="connector-line" x1="420" y1="310" x2="420" y2="350" aria-hidden="true"/>
+                    <a href="contentPages/contentPageStudent2.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Content Page 2 - Preventing Ocean Pollution</title>
+                            <rect class="node-rect" x="340" y="350" width="160" height="50" />
+                            <text class="node-text" x="420" y="377">CONTENT 2</text>
+                        </g>
+                    </a>
+
+                    <!-- Content 3 -->
+                    <line class="connector-line" x1="560" y1="310" x2="560" y2="350" aria-hidden="true"/>
+                    <a href="contentPages/contentPageStudent3.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Content Page 3 - Ocean Acidification Solutions</title>
+                            <rect class="node-rect" x="480" y="350" width="160" height="50" />
+                            <text class="node-text" x="560" y="377">CONTENT 3</text>
+                        </g>
+                    </a>
+
+                    <!-- Content 4 -->
+                    <line class="connector-line" x1="720" y1="310" x2="720" y2="350" aria-hidden="true"/>
+                    <a href="contentPages/contentPageStudent4.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>Content Page 4 - Marine Biodiversity</title>
+                            <rect class="node-rect" x="640" y="350" width="160" height="50" />
+                            <text class="node-text" x="720" y="377">CONTENT 4</text>
+                        </g>
+                    </a>
+
+                    <!-- Legend -->
+                    <text class="node-text" x="500" y="490" style="font-weight: 800; font-size: 14px; fill: #0160C9; text-anchor: middle;">Navigation Guide</text>
+                    <text class="node-text" x="500" y="520" style="font-size: 12px; fill: #666; text-anchor: middle;">Click any box to navigate • Tab to move between pages • Enter to activate</text>
+                </svg>
+            </div>
+
+            <div class="legend">
+                <p><strong>Website Structure Overview:</strong> This sitemap shows the hierarchy of the Life Below Water website, with Home at the root level, main pages (Gallery, Simulator, Feedback, Team, Sitemap) at the first level, and educational content pages at the second level, all directly accessible from the home page.</p>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+            <p>Yoosuf Husain - 20244063</p>
+        </footer>
+
+        <script>
+            const stickyNav = document.querySelector('.sticky-nav');
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > header.offsetHeight - 80) {
+                    stickyNav.classList.add('visible');
+                } else {
+                    stickyNav.classList.remove('visible');
+                }
+            });
+
+            // Keyboard accessibility for SVG links
+            const links = document.querySelectorAll('.node-link');
+            links.forEach(link => {
+                link.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        link.click();
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
