@@ -283,140 +283,159 @@
             <h2 class="sitemap-title">Website Sitemap</h2>
             
             <div class="sitemap-container">
-                <svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Website hierarchy sitemap">
+                <svg viewBox="0 0 1100 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Website hierarchy sitemap">
                     <defs>
                         <style>
                             .sitemap-node:focus { outline: 2px solid #3ACBE8; }
                         </style>
                     </defs>
 
-                    <!-- HOME (Top Level) -->
-                    <line class="connector-line" x1="500" y1="30" x2="500" y2="70" aria-hidden="true"/>
+                    <!--
+                        Layout Plan (viewBox 1100 x 520):
+                        HOME centre: x=550
+
+                        Row 1 — 5 nodes, evenly spaced across 60..1040
+                        Gap = (1040-60)/4 = 245 → centres: 60+90=150, 395, 550, 705, 860
+                        Node width=160, so left edge = centre-80
+                        centres: 150, 395, 550, 705, 860
+
+                        Row 2 — 4 nodes, evenly spaced across 60..680
+                        Gap = (680-60)/3 = ~206.7 → centres: 60+80=140, 347, 553, 760  
+                        Actually let's keep them centred nicely:
+                        centres: 170, 390, 610, 830 (gap=220, full spread 60→830+80=910)
+                        Better: span 110 to 990, gap=(990-110)/3=~293, centres: 190, 483, 777  — 3 gaps for 4 items
+                        Let's use: centres 150, 430, 710, 990 → gap=280, left=70, right=1030...too wide
+                        Use: centres 180, 430, 670, 920 (left=100, right=1000)
+                    -->
+
+                    <!-- ═══════════════════════════════════════════ -->
+                    <!-- LEVEL 0 — HOME                             -->
+                    <!-- ═══════════════════════════════════════════ -->
+                    <!-- vertical stem from top edge into HOME box -->
+                    <line class="connector-line" x1="550" y1="10" x2="550" y2="60" aria-hidden="true"/>
+
                     <a href="index.html" class="node-link" tabindex="0">
                         <g>
                             <title>Home Page - Main Landing Page</title>
-                            <rect class="node-rect" x="420" y="70" width="160" height="50" />
-                            <text class="node-text" x="500" y="97">HOME</text>
+                            <rect class="node-rect" x="470" y="60" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="550" y="90">HOME</text>
                         </g>
                     </a>
 
-                    <!-- Main Pages Inverted L Connector -->
-                    <!-- Vertical line down from HOME -->
-                    <line class="connector-line" x1="500" y1="120" x2="500" y2="150" aria-hidden="true"/>
-                    
-                    <!-- Left side of inverted L for main pages -->
-                    <line class="connector-line" x1="500" y1="150" x2="100" y2="150" aria-hidden="true"/>
-                    <line class="connector-line" x1="100" y1="150" x2="100" y2="175" aria-hidden="true"/>
-                    
-                    <!-- Bottom horizontal line for main pages -->
-                    <line class="connector-line" x1="100" y1="175" x2="900" y2="175" aria-hidden="true"/>
+                    <!-- ═══════════════════════════════════════════ -->
+                    <!-- LEVEL 1 — 5 nodes                         -->
+                    <!-- centres: 110, 330, 550, 770, 990          -->
+                    <!-- ═══════════════════════════════════════════ -->
 
-                    <!-- Main Pages (connectors drop from bottom line) -->
-                    <!-- Gallery -->
-                    <line class="connector-line" x1="120" y1="175" x2="120" y2="210" aria-hidden="true"/>
+                    <!-- vertical drop from HOME bottom to horizontal rail -->
+                    <line class="connector-line" x1="550" y1="110" x2="550" y2="150" aria-hidden="true"/>
+                    <!-- horizontal rail spanning all 5 node centres -->
+                    <line class="connector-line" x1="110" y1="150" x2="990" y2="150" aria-hidden="true"/>
+
+                    <!-- Gallery (centre 110) -->
+                    <line class="connector-line" x1="110" y1="150" x2="110" y2="190" aria-hidden="true"/>
                     <a href="gallery.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Gallery - View Ocean and Marine Images</title>
-                            <rect class="node-rect" x="40" y="210" width="160" height="50" />
-                            <text class="node-text" x="120" y="237">GALLERY</text>
+                            <title>Gallery</title>
+                            <rect class="node-rect" x="30" y="190" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="110" y="220">Gallery</text>
                         </g>
                     </a>
 
-                    <!-- Simulator -->
-                    <line class="connector-line" x1="280" y1="175" x2="280" y2="210" aria-hidden="true"/>
+                    <!-- Simulator (centre 330) -->
+                    <line class="connector-line" x1="330" y1="150" x2="330" y2="190" aria-hidden="true"/>
                     <a href="simulator.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Action Impact Simulator - Interactive Tool</title>
-                            <rect class="node-rect" x="200" y="210" width="160" height="50" />
-                            <text class="node-text" x="280" y="237">SIMULATOR</text>
+                            <title>Simulator</title>
+                            <rect class="node-rect" x="250" y="190" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="330" y="220">Simulator</text>
                         </g>
                     </a>
 
-                    <!-- Feedback -->
-                    <line class="connector-line" x1="440" y1="175" x2="440" y2="210" aria-hidden="true"/>
+                    <!-- Feedback (centre 550) -->
+                    <line class="connector-line" x1="550" y1="150" x2="550" y2="190" aria-hidden="true"/>
                     <a href="feedback.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Feedback - Send Us Your Feedback</title>
-                            <rect class="node-rect" x="360" y="210" width="160" height="50" />
-                            <text class="node-text" x="440" y="237">FEEDBACK</text>
+                            <title>Feedback</title>
+                            <rect class="node-rect" x="470" y="190" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="550" y="220">Feedback</text>
                         </g>
                     </a>
 
-                    <!-- Team Page -->
-                    <line class="connector-line" x1="600" y1="175" x2="600" y2="210" aria-hidden="true"/>
+                    <!-- Team Page (centre 770) -->
+                    <line class="connector-line" x1="770" y1="150" x2="770" y2="190" aria-hidden="true"/>
                     <a href="teamPage.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Our Team - Meet the Team Members</title>
-                            <rect class="node-rect" x="520" y="210" width="160" height="50" />
-                            <text class="node-text" x="600" y="237">OUR TEAM</text>
+                            <title>Team Page</title>
+                            <rect class="node-rect" x="690" y="190" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="770" y="220">Team Page</text>
                         </g>
                     </a>
 
-                    <!-- Sitemap (Current Page - Highlighted) -->
-                    <line class="connector-line" x1="880" y1="175" x2="880" y2="210" aria-hidden="true"/>
-                    <a href="sitemap.html" class="node-link" tabindex="0">
+                    <!-- Splash (centre 990) -->
+                    <line class="connector-line" x1="990" y1="150" x2="990" y2="190" aria-hidden="true"/>
+                    <a href="splash.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Sitemap - Current Page (Website Structure)</title>
-                            <rect class="node-rect" x="800" y="210" width="160" height="50" style="stroke:#3ACBE8; stroke-width:4;" />
-                            <text class="node-text" x="880" y="237">SITEMAP</text>
+                            <title>Splash</title>
+                            <rect class="node-rect" x="910" y="190" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="990" y="220">Splash</text>
                         </g>
                     </a>
 
-                    <!-- Content Pages Inverted L Connector -->
-                    <!-- Vertical line down from HOME -->
-                    <line class="connector-line" x1="500" y1="120" x2="500" y2="290" aria-hidden="true"/>
-                    
-                    <!-- Left side of inverted L for content pages -->
-                    <line class="connector-line" x1="500" y1="290" x2="60" y2="290" aria-hidden="true"/>
-                    <line class="connector-line" x1="60" y1="290" x2="60" y2="320" aria-hidden="true"/>
-                    
-                    <!-- Bottom horizontal line for content pages -->
-                    <line class="connector-line" x1="60" y1="320" x2="850" y2="320" aria-hidden="true"/>
+                    <!-- ═══════════════════════════════════════════ -->
+                    <!-- LEVEL 2 — 4 content nodes                 -->
+                    <!-- centres: 180, 430, 670, 920               -->
+                    <!-- connector drops from Gallery bottom (110) -->
+                    <!-- ═══════════════════════════════════════════ -->
 
-                    <!-- Content Pages (connectors drop from bottom line) -->
-                    <!-- Content 1 -->
-                    <line class="connector-line" x1="200" y1="320" x2="200" y2="360" aria-hidden="true"/>
+                    <!-- vertical drop from Gallery bottom to horizontal rail -->
+                    <line class="connector-line" x1="110" y1="240" x2="110" y2="315" aria-hidden="true"/>
+                    <!-- horizontal rail spanning all 4 content node centres -->
+                    <line class="connector-line" x1="110" y1="315" x2="920" y2="315" aria-hidden="true"/>
+
+                    <!-- Content 1 (centre 180) -->
+                    <line class="connector-line" x1="180" y1="315" x2="180" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent1.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Content Page 1 - Saving Coral Reefs</title>
-                            <rect class="node-rect" x="120" y="360" width="160" height="50" />
-                            <text class="node-text" x="200" y="387">CONTENT 1</text>
+                            <title>Content Page 1</title>
+                            <rect class="node-rect" x="100" y="360" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="180" y="390">Content 1</text>
                         </g>
                     </a>
 
-                    <!-- Content 2 -->
-                    <line class="connector-line" x1="380" y1="320" x2="380" y2="360" aria-hidden="true"/>
+                    <!-- Content 2 (centre 430) -->
+                    <line class="connector-line" x1="430" y1="315" x2="430" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent2.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Content Page 2 - Preventing Ocean Pollution</title>
-                            <rect class="node-rect" x="300" y="360" width="160" height="50" />
-                            <text class="node-text" x="380" y="387">CONTENT 2</text>
+                            <title>Content Page 2</title>
+                            <rect class="node-rect" x="350" y="360" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="430" y="390">Content 2</text>
                         </g>
                     </a>
 
-                    <!-- Content 3 -->
-                    <line class="connector-line" x1="560" y1="320" x2="560" y2="360" aria-hidden="true"/>
+                    <!-- Content 3 (centre 675) -->
+                    <line class="connector-line" x1="675" y1="315" x2="675" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent3.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Content Page 3 - Ocean Acidification Solutions</title>
-                            <rect class="node-rect" x="480" y="360" width="160" height="50" />
-                            <text class="node-text" x="560" y="387">CONTENT 3</text>
+                            <title>Content Page 3</title>
+                            <rect class="node-rect" x="595" y="360" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="675" y="390">Content 3</text>
                         </g>
                     </a>
 
-                    <!-- Content 4 -->
-                    <line class="connector-line" x1="720" y1="320" x2="720" y2="360" aria-hidden="true"/>
+                    <!-- Content 4 (centre 920) -->
+                    <line class="connector-line" x1="920" y1="315" x2="920" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent4.html" class="node-link" tabindex="0">
                         <g>
-                            <title>Content Page 4 - Marine Biodiversity</title>
-                            <rect class="node-rect" x="640" y="360" width="160" height="50" />
-                            <text class="node-text" x="720" y="387">CONTENT 4</text>
+                            <title>Content Page 4</title>
+                            <rect class="node-rect" x="840" y="360" width="160" height="50" rx="8" ry="8"/>
+                            <text class="node-text" x="920" y="390">Content 4</text>
                         </g>
                     </a>
 
                     <!-- Legend -->
-                    <text class="node-text" x="500" y="470" style="font-weight: 800; font-size: 14px; fill: #ffffff; text-anchor: middle;">Navigation Guide</text>
-                    <text class="node-text" x="500" y="492" style="font-size: 12px; fill: #ffffff; text-anchor: middle;">Click any box to navigate • Tab to move between pages • Enter to activate</text>
+                    <text class="node-text" x="550" y="440" style="font-weight: 800; font-size: 14px; fill: #ffffff; text-anchor: middle;">Navigation Guide</text>
+                    <text class="node-text" x="550" y="462" style="font-size: 12px; fill: #ffffff; text-anchor: middle;">Click any box to navigate • Tab to move between pages • Enter to activate</text>
                 </svg>
             </div>
 
