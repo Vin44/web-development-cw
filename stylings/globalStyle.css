@@ -8,7 +8,8 @@ main content area, and footer, as well as specific classes for elements like car
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background: url("../images/background.jpeg") center/cover no-repeat; /* this is the background image for the website, which is set to cover the entire viewport and remain fixed during scrolling. */
+  background: url("../images/background.jpeg") center/cover no-repeat;
+  /* this is the background image for the website, which is set to cover the entire viewport and remain fixed during scrolling. */
   background-attachment: fixed;
   color: #333;
 }
@@ -109,6 +110,7 @@ header nav a:hover {
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
 }
+
 /* 
 contains the stylers for the main content area of the website, 
 which includes a maximum width, centered layout, padding, 
@@ -143,7 +145,7 @@ footer {
   text-align: center;
   padding: 40px 20px;
   color: rgb(197, 196, 196);
-  background: rgba(83, 116, 216, 0.3); 
+  background: rgba(83, 116, 216, 0.3);
   backdrop-filter: blur(5px);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -187,7 +189,7 @@ footer a:active {
   margin: 0;
   color: white;
   font-size: 45px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .op {
@@ -203,12 +205,12 @@ footer a:active {
 
 .below {
   font-family: 'Inter', sans-serif;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .water {
   font-family: 'Inter', sans-serif;
-  font-weight: 550; 
+  font-weight: 550;
 }
 
 .active {
@@ -247,7 +249,7 @@ footer a:active {
   box-sizing: border-box;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  
+
 }
 
 .sticky-nav.visible {
@@ -292,4 +294,3 @@ footer a:active {
   padding-right: 20px;
   padding-top: 20px;
 }
-

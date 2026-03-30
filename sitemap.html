@@ -6,109 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Life Below Water</title>
     <link rel="stylesheet" href="stylings/globalStyle.css">
+    <link rel="stylesheet" href="stylings/sitemap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <style>
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .sitemap-title {
-            text-align: center;
-            color: #0160C9;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            font-weight: 800;
-        }
-
-        .sitemap-container {
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        svg {
-            min-width: 100%;
-            height: auto;
-            max-width: 1000px;
-        }
-
-        /* SVG Styling */
-        .node-rect {
-            fill: #0160C9;
-            stroke: #0D85D8;
-            stroke-width: 2;
-            rx: 8;
-            ry: 8;
-            transition: all 0.3s ease;
-        }
-
-        .node-rect:hover,
-        .node-rect:focus {
-            fill: #0D85D8;
-            stroke: #3ACBE8;
-            stroke-width: 3;
-        }
-
-        .node-text {
-            fill: #ffffff;
-            font-size: 14px;
-            text-anchor: middle;
-            dominant-baseline: middle;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            pointer-events: none;
-        }
-
-        .node-link {
-            cursor: pointer;
-        }
-
-        .node-link:focus {
-            outline: 2px solid #3ACBE8;
-            outline-offset: 3px;
-        }
-
-        .connector-line {
-            stroke: #0160C9;
-            stroke-width: 2;
-            fill: none;
-        }
-
-        .legend {
-            text-align: center;
-            margin-top: 30px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .sitemap-title {
-                font-size: 1.5rem;
-            }
-
-            .node-text {
-                font-size: 12px;
-            }
-
-            .node-rect {
-                stroke-width: 1.5;
-            }
-
-            .connector-line {
-                stroke-width: 1.5;
-            }
-        }
-    </style>
 </head>
 
 <body>
+
     <header>
         <a href="userProfile.html" class="profile-btn" title="User Profile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
@@ -119,6 +26,7 @@
         <div class="logo-container">
             <img src="images/logo.png" alt="Website Logo">
             <h1 class="website-title">
+                <span class="op">OceanPulse:</span>
                 <span class="life">LIFE</span>
                 <span class="below">BELOW</span>
                 <span class="water">WATER</span>
@@ -136,306 +44,175 @@
         </nav>
     </header>
 
-        <div class="sticky-nav">
-            <a href="userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-            </a>
-            <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
-            <h2 class="sticky-title">
-                <span class="life">LIFE</span>
-                <span class="below">BELOW</span>
-                <span class="water">WATER</span>
-            </h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="simulator.html">Action Impact Simulator</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="teamPage.html">Our Team</a></li>
-                    <li><a href="sitemap.html" class="active">Site Map</a></li>
-                </ul>
-            </nav>
-        </div>
-
-    <main>
-        <h2>Website Sitemap</h2>
-        <p>Below is the hierarchical structure of the Life Below Water website.</p>
-        
-        <div class="card sitemap-card">
-            <svg
-                class="sitemap-svg"
-                viewBox="0 0 1000 580"
-                role="img"
-                aria-labelledby="svgTitle svgDesc"
-            >
-                <title id="svgTitle">Life Below Water Website Sitemap</title>
-                <desc id="svgDesc">Hierarchical tree showing Home at the root with main pages and content pages.</desc>
-
-                <!-- Level 1: HOME (Root) -->
-                <a xlink:href="index.html">
-                    <rect x="400" y="10" width="200" height="50" rx="8" class="svg-node svg-home"/>
-                    <text x="500" y="40" class="svg-label">HOME</text>
-                </a>
-
-                <!-- Vertical line from HOME -->
-                <line x1="500" y1="60" x2="500" y2="90" class="svg-line"/>
-
-                <!-- Main branch line -->
-                <line x1="500" y1="90" x2="500" y2="110" class="svg-line"/>
-                <line x1="100" y1="110" x2="900" y2="110" class="svg-line"/>
-
-                <!-- Level 2: MAIN PAGES -->
-                <!-- SPLASH -->
-                <line x1="140" y1="110" x2="140" y2="140" class="svg-line"/>
-                <a xlink:href="splash.html">
-                    <rect x="50" y="140" width="180" height="45" rx="8" class="svg-node"/>
-                    <text x="140" y="168" class="svg-label">SPLASH</text>
-                </a>
-
-                <!-- GALLERY -->
-                <line x1="280" y1="110" x2="280" y2="140" class="svg-line"/>
-                <a xlink:href="gallery.html">
-                    <rect x="190" y="140" width="180" height="45" rx="8" class="svg-node"/>
-                    <text x="280" y="168" class="svg-label">GALLERY</text>
-                </a>
-
-                <!-- TEAM -->
-                <line x1="420" y1="110" x2="420" y2="140" class="svg-line"/>
-                <a xlink:href="teamPage.html">
-                    <rect x="330" y="140" width="180" height="45" rx="8" class="svg-node"/>
-                    <text x="420" y="168" class="svg-label">TEAM</text>
-                </a>
-
-                <!-- FEEDBACK -->
-                <line x1="560" y1="110" x2="560" y2="140" class="svg-line"/>
-                <a xlink:href="feedback.html">
-                    <rect x="470" y="140" width="180" height="45" rx="8" class="svg-node"/>
-                    <text x="560" y="168" class="svg-label">FEEDBACK</text>
-                </a>
-
-                <!-- SIMULATOR -->
-                <line x1="700" y1="110" x2="700" y2="140" class="svg-line"/>
-                <a xlink:href="simulator.html">
-                    <rect x="610" y="140" width="180" height="45" rx="8" class="svg-node"/>
-                    <text x="700" y="168" class="svg-label">SIMULATOR</text>
-                </a>
-
-                <!-- SITEMAP -->
-                <line x1="840" y1="110" x2="840" y2="140" class="svg-line"/>
-                <a xlink:href="sitemap.html">
-                    <rect x="750" y="140" width="180" height="45" rx="8" class="svg-node svg-current"/>
-                    <text x="840" y="168" class="svg-label">SITEMAP</text>
-                </a>
-
-                <!-- USER PROFILE -->
-                <line x1="900" y1="110" x2="900" y2="140" class="svg-line"/>
-                <a xlink:href="userProfile.html">
-                    <rect x="810" y="140" width="180" height="45" rx="8" class="svg-node"/>
-                    <text x="900" y="168" class="svg-label">PROFILE</text>
-                </a>
-
-                <!-- Level 2b: CONTENT PAGES GROUP -->
-                <!-- Connector from HOME to Content Pages -->
-                <line x1="500" y1="90" x2="500" y2="230" class="svg-line"/>
-                <line x1="500" y1="230" x2="500" y2="250" class="svg-line"/>
-
-                <!-- Content Pages header/box -->
-                <text x="500" y="235" class="svg-header">CONTENT PAGES</text>
-
-                <!-- Horizontal content pages line -->
-                <line x1="200" y1="250" x2="800" y2="250" class="svg-line"/>
-
-                <!-- CONTENT 1 -->
-                <line x1="260" y1="250" x2="260" y2="280" class="svg-line"/>
-                <a xlink:href="contentPages/contentPageStudent1.html">
-                    <rect x="170" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
-                    <text x="260" y="308" class="svg-label">CONTENT 1</text>
-                </a>
-
-                <!-- CONTENT 2 -->
-                <line x1="400" y1="250" x2="400" y2="280" class="svg-line"/>
-                <a xlink:href="contentPages/contentPageStudent2.html">
-                    <rect x="310" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
-                    <text x="400" y="308" class="svg-label">CONTENT 2</text>
-                </a>
-
-                <!-- CONTENT 3 -->
-                <line x1="540" y1="250" x2="540" y2="280" class="svg-line"/>
-                <a xlink:href="contentPages/contentPageStudent3.html">
-                    <rect x="450" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
-                    <text x="540" y="308" class="svg-label">CONTENT 3</text>
-                </a>
-
-                <!-- CONTENT 4 -->
-                <line x1="680" y1="250" x2="680" y2="280" class="svg-line"/>
-                <a xlink:href="contentPages/contentPageStudent4.html">
-                    <rect x="590" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
-                    <text x="680" y="308" class="svg-label">CONTENT 4</text>
-                </a>
-
+    <div class="sticky-nav">
+        <a href="userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
             </svg>
-        </div>
-
-        <p class="sitemap-caption">
-            <strong>Figure:</strong> Life Below Water website hierarchical sitemap. Home is at the root level, main pages (Splash, Gallery, Team, Feedback, Simulator, Sitemap, Profile) at level 2, and content pages below.
-        </p>
-    </main>
+        </a>
+        <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
+        <h2 class="sticky-title">
+            <span class="op-span">OceanPulse:</span>
+            <span class="life">LIFE</span>
+            <span class="below"> BELOW</span>
+            <span class="water"> WATER</span>
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="simulator.html">Action Impact Simulator</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="teamPage.html">Our Team</a></li>
+                <li><a href="sitemap.html" class="active">Site Map</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <h2 class="sitemap-title">Website Sitemap</h2>
 
         <div class="sitemap-container">
-            <svg viewBox="0 0 1100 520" xmlns="http://www.w3.org/2000/svg" role="img"
+            <svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img"
                 aria-label="Website hierarchy sitemap">
-                <defs>
-                    <style>
-                        .sitemap-node:focus {
-                            outline: 2px solid #3ACBE8;
-                        }
-                    </style>
-                </defs>
 
+                <a href="splash.html" class="node-link" tabindex="0">
+                    <g>
+                        <title>Splash Page</title>
+                        <rect class="node-rect" x="520" y="20" width="160" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="600" y="50">Splash</text>
+                    </g>
+                </a>
 
-                <!-- vertical stem from top edge into HOME box -->
-                <line class="connector-line" x1="550" y1="10" x2="550" y2="60" aria-hidden="true" />
+                <line class="connector-line" x1="600" y1="70" x2="600" y2="120" />
 
                 <a href="index.html" class="node-link" tabindex="0">
                     <g>
-                        <title>Home Page - Main Landing Page</title>
-                        <rect class="node-rect" x="470" y="60" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="550" y="90">HOME</text>
+                        <title>Home Page</title>
+                        <rect class="node-rect" x="520" y="120" width="160" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="600" y="150">HOME</text>
                     </g>
                 </a>
 
+                <line class="connector-line" x1="600" y1="170" x2="600" y2="215" />
+                <line class="connector-line" x1="125" y1="215" x2="1075" y2="215" />
 
-
-                <!-- vertical drop from HOME bottom to horizontal rail -->
-                <line class="connector-line" x1="550" y1="110" x2="550" y2="150" aria-hidden="true" />
-                <!-- horizontal rail spanning all 5 node centres -->
-                <line class="connector-line" x1="110" y1="150" x2="990" y2="150" aria-hidden="true" />
-
-                <!-- Gallery (centre 110) -->
-                <line class="connector-line" x1="110" y1="150" x2="110" y2="190" aria-hidden="true" />
+                <line class="connector-line" x1="125" y1="215" x2="125" y2="255" />
                 <a href="gallery.html" class="node-link" tabindex="0">
                     <g>
                         <title>Gallery</title>
-                        <rect class="node-rect" x="30" y="190" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="110" y="220">Gallery</text>
+                        <rect class="node-rect" x="50" y="255" width="150" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="125" y="285">Gallery</text>
                     </g>
                 </a>
 
-                <!-- Simulator (centre 330) -->
-                <line class="connector-line" x1="330" y1="150" x2="330" y2="190" aria-hidden="true" />
+                <line class="connector-line" x1="315" y1="215" x2="315" y2="255" />
                 <a href="simulator.html" class="node-link" tabindex="0">
                     <g>
                         <title>Simulator</title>
-                        <rect class="node-rect" x="250" y="190" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="330" y="220">Simulator</text>
+                        <rect class="node-rect" x="240" y="255" width="150" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="315" y="285">Simulator</text>
                     </g>
                 </a>
 
-                <!-- Feedback (centre 550) -->
-                <line class="connector-line" x1="550" y1="150" x2="550" y2="190" aria-hidden="true" />
+                <line class="connector-line" x1="505" y1="215" x2="505" y2="255" />
                 <a href="feedback.html" class="node-link" tabindex="0">
                     <g>
                         <title>Feedback</title>
-                        <rect class="node-rect" x="470" y="190" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="550" y="220">Feedback</text>
+                        <rect class="node-rect" x="430" y="255" width="150" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="505" y="285">Feedback</text>
                     </g>
                 </a>
 
-                <!-- Team Page (centre 770) -->
-                <line class="connector-line" x1="770" y1="150" x2="770" y2="190" aria-hidden="true" />
+                <line class="connector-line" x1="695" y1="215" x2="695" y2="255" />
                 <a href="teamPage.html" class="node-link" tabindex="0">
                     <g>
                         <title>Team Page</title>
-                        <rect class="node-rect" x="690" y="190" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="770" y="220">Team Page</text>
+                        <rect class="node-rect" x="620" y="255" width="150" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="695" y="285">Team Page</text>
                     </g>
                 </a>
 
-                <!-- Splash (centre 990) -->
-                <line class="connector-line" x1="990" y1="150" x2="990" y2="190" aria-hidden="true" />
-                <a href="splash.html" class="node-link" tabindex="0">
+                <line class="connector-line" x1="885" y1="215" x2="885" y2="255" />
+                <a href="sitemap.html" class="node-link" tabindex="0">
                     <g>
-                        <title>Splash</title>
-                        <rect class="node-rect" x="910" y="190" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="990" y="220">Splash</text>
+                        <title>Sitemap - Current Page</title>
+                        <rect class="node-rect node-rect--current" x="810" y="255" width="150" height="50" rx="8"
+                            ry="8" />
+                        <text class="node-text" x="885" y="285">Sitemap</text>
                     </g>
                 </a>
 
+                <line class="connector-line" x1="1075" y1="215" x2="1075" y2="255" />
+                <a href="userProfile.html" class="node-link" tabindex="0">
+                    <g>
+                        <title>User Profile</title>
+                        <rect class="node-rect" x="1000" y="255" width="150" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="1075" y="285">Profile</text>
+                    </g>
+                </a>
 
+                <line class="connector-line" x1="600" y1="170" x2="600" y2="385" />
+                <line class="connector-line" x1="270" y1="385" x2="930" y2="385" />
 
-                <!-- vertical drop from Gallery bottom to horizontal rail -->
-                <line class="connector-line" x1="110" y1="240" x2="110" y2="315" aria-hidden="true" />
-                <!-- horizontal rail spanning all 4 content node centres -->
-                <line class="connector-line" x1="110" y1="315" x2="920" y2="315" aria-hidden="true" />
-
-                <!-- Content 1 (centre 180) -->
-                <line class="connector-line" x1="180" y1="315" x2="180" y2="360" aria-hidden="true" />
+                <line class="connector-line" x1="270" y1="385" x2="270" y2="420" />
                 <a href="contentPages/contentPageStudent1.html" class="node-link" tabindex="0">
                     <g>
                         <title>Content Page 1</title>
-                        <rect class="node-rect" x="100" y="360" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="180" y="390">Content 1</text>
+                        <rect class="node-rect" x="190" y="420" width="160" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="270" y="450">Content 1</text>
                     </g>
                 </a>
 
-                <!-- Content 2 (centre 430) -->
-                <line class="connector-line" x1="430" y1="315" x2="430" y2="360" aria-hidden="true" />
+                <line class="connector-line" x1="490" y1="385" x2="490" y2="420" />
                 <a href="contentPages/contentPageStudent2.html" class="node-link" tabindex="0">
                     <g>
                         <title>Content Page 2</title>
-                        <rect class="node-rect" x="350" y="360" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="430" y="390">Content 2</text>
+                        <rect class="node-rect" x="410" y="420" width="160" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="490" y="450">Content 2</text>
                     </g>
                 </a>
 
-                <!-- Content 3 (centre 675) -->
-                <line class="connector-line" x1="675" y1="315" x2="675" y2="360" aria-hidden="true" />
+                <line class="connector-line" x1="710" y1="385" x2="710" y2="420" />
                 <a href="contentPages/contentPageStudent3.html" class="node-link" tabindex="0">
                     <g>
                         <title>Content Page 3</title>
-                        <rect class="node-rect" x="595" y="360" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="675" y="390">Content 3</text>
+                        <rect class="node-rect" x="630" y="420" width="160" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="710" y="450">Content 3</text>
                     </g>
                 </a>
 
-                <!-- Content 4 (centre 920) -->
-                <line class="connector-line" x1="920" y1="315" x2="920" y2="360" aria-hidden="true" />
+                <line class="connector-line" x1="930" y1="385" x2="930" y2="420" />
                 <a href="contentPages/contentPageStudent4.html" class="node-link" tabindex="0">
                     <g>
                         <title>Content Page 4</title>
-                        <rect class="node-rect" x="840" y="360" width="160" height="50" rx="8" ry="8" />
-                        <text class="node-text" x="920" y="390">Content 4</text>
+                        <rect class="node-rect" x="850" y="420" width="160" height="50" rx="8" ry="8" />
+                        <text class="node-text" x="930" y="450">Content 4</text>
                     </g>
                 </a>
 
-                <!-- Legend -->
-                <text class="node-text" x="550" y="440"
+                <text class="node-text" x="600" y="520"
                     style="font-weight: 800; font-size: 14px; fill: #ffffff; text-anchor: middle;">Navigation
                     Guide</text>
-                <text class="node-text" x="550" y="462"
-                    style="font-size: 12px; fill: #ffffff; text-anchor: middle;">Click any box to navigate • Tab to move
-                    between pages • Enter to activate</text>
+                <text class="node-text" x="600" y="542"
+                    style="font-size: 12px; fill: #ffffff; text-anchor: middle;">Click any box to navigate &bull; Tab to
+                    move between pages &bull; Enter to activate</text>
+
             </svg>
         </div>
 
         <div class="legend">
             <p style="color: #ffffff;"><strong>Website Structure Overview:</strong> This sitemap shows the hierarchy of
-                the Life Below Water website, with Home at the root level, main pages (Gallery, Simulator, Feedback,
-                Team, Sitemap) connected through an inverted L pattern at the first level, and educational content pages
-                connected through another inverted L pattern at the second level. All pages are fully interactive and
-                accessible via keyboard navigation.</p>
+                the OceanPulse: LIFE BELOW WATER website. Splash is the entry point, followed by Home. Main pages branch
+                from Home
+                at the first level, and content pages are at the second level. The current page (Sitemap) is highlighted
+                in teal.</p>
         </div>
     </main>
 
-
     <footer>
-        <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+        <p>&copy; 2026 Life Below Water. All rights reserved.</p>
         <p>Yoosuf Husain - 20244063</p>
         <a href="page-editors/pageEditorStudent4.html">Page Editor</a>
         <a href="validation/validationPageStudent4.html">Validation</a>
@@ -453,7 +230,6 @@
             }
         });
 
-        // Keyboard accessibility for SVG links
         const links = document.querySelectorAll('.node-link');
         links.forEach(link => {
             link.addEventListener('keydown', (e) => {
@@ -464,6 +240,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>

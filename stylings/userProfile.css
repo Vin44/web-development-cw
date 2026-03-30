@@ -65,7 +65,7 @@ main {
 }
 
 .progress-info h3 {
-    color: #0160C9;
+    color: #3ACBE8;
     font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
@@ -73,7 +73,7 @@ main {
 }
 
 .prompt-count {
-    color: #666;
+    color: #d0e8f5;
     font-size: 0.95rem;
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -109,16 +109,16 @@ main {
 }
 
 .steps-label {
-    color: #0160C9;
+    color: #3ACBE8;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
 }
 
 .step-btn {
     padding: 0.5rem 1rem;
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid rgba(58, 203, 232, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(58, 203, 232, 0.4);
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
@@ -128,7 +128,7 @@ main {
 }
 
 .step-btn:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(58, 203, 232, 0.2);
     transform: translateY(-2px);
 }
 
@@ -142,7 +142,7 @@ main {
 }
 
 .status-message p {
-    color: #0160C9;
+    color: #d0f0fa;
     font-size: 0.95rem;
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -160,7 +160,7 @@ main {
 .btn-revisit {
     padding: 0.6rem 1.2rem;
     background: rgba(255, 255, 255, 0.1);
-    color: #0160C9;
+    color: #ffffff;
     border: 1px solid rgba(58, 203, 232, 0.3);
     border-radius: 20px;
     cursor: pointer;
@@ -186,7 +186,7 @@ main {
 }
 
 .step-section h3 {
-    color: #0160C9;
+    color: #3ACBE8;
     font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -195,7 +195,7 @@ main {
 }
 
 .step-section p {
-    color: #1a1a1a;
+    color: #e8f0fe;
     font-size: 1rem;
     margin-bottom: 1.5rem;
     font-family: 'Inter', sans-serif;
@@ -232,7 +232,7 @@ main {
 
 .btn-secondary {
     background: rgba(255, 255, 255, 0.1);
-    color: #0160C9;
+    color: #ffffff;
     border: 1px solid rgba(58, 203, 232, 0.3);
 }
 
@@ -250,7 +250,7 @@ main {
 }
 
 .profile-output-section h2 {
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -274,7 +274,7 @@ main {
 }
 
 .profile-card h3 {
-    color: #0160C9;
+    color: #3ACBE8;
     font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -285,14 +285,14 @@ main {
 }
 
 .profile-card p {
-    color: #1a1a1a;
+    color: #e8f0fe;
     font-size: 0.95rem;
     margin: 0.75rem 0;
     font-family: 'Inter', sans-serif;
 }
 
 .profile-card strong {
-    color: #0160C9;
+    color: #3ACBE8;
     font-weight: 600;
 }
 
@@ -307,7 +307,7 @@ main {
 }
 
 .confirmation-section h3 {
-    color: #0160C9;
+    color: #3ACBE8;
     font-size: 1.3rem;
     margin-top: 0;
     font-weight: 600;
@@ -315,78 +315,8 @@ main {
 }
 
 .confirmation-section p {
-    color: #1a1a1a;
+    color: #e8f0fe;
     font-size: 1rem;
     margin: 0.75rem 0 0 0;
     font-family: 'Inter', sans-serif;
-}
-
-/* Footer */
-footer {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    margin-top: 3rem;
-    text-align: center;
-    color: #ededed;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: #3ACBE8;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #0160C9;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .profile-hero h2 {
-        font-size: 2rem;
-    }
-
-    .profile-hero p {
-        font-size: 1rem;
-    }
-
-    .profile-container {
-        padding: 1rem;
-    }
-
-    .button-controls {
-        flex-direction: column;
-    }
-
-    .btn-large {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .step-navigation {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .button-group {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .revisit-buttons {
-        flex-direction: column;
-    }
-
-    .btn-revisit {
-        width: 100%;
-    }
 }
