@@ -283,7 +283,7 @@
             <h2 class="sitemap-title">Website Sitemap</h2>
             
             <div class="sitemap-container">
-                <svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Website hierarchy sitemap">
+                <svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Website hierarchy sitemap">
                     <defs>
                         <style>
                             .sitemap-node:focus { outline: 2px solid #3ACBE8; }
@@ -300,8 +300,7 @@
                         </g>
                     </a>
 
-                    <!-- Two branches from HOME -->
-                    <!-- Upper branch: Main Pages -->
+                    <!-- Main Pages Branch -->
                     <line class="connector-line" x1="500" y1="120" x2="500" y2="150" aria-hidden="true"/>
                     <line class="connector-line" x1="100" y1="150" x2="900" y2="150" aria-hidden="true"/>
 
@@ -346,6 +345,16 @@
                         </g>
                     </a>
 
+                    <!-- User Profile -->
+                    <line class="connector-line" x1="720" y1="150" x2="720" y2="190" aria-hidden="true"/>
+                    <a href="userProfile.html" class="node-link" tabindex="0">
+                        <g>
+                            <title>User Profile - Build Your Profile</title>
+                            <rect class="node-rect" x="640" y="190" width="160" height="50" />
+                            <text class="node-text" x="720" y="217">USER PROFILE</text>
+                        </g>
+                    </a>
+
                     <!-- Sitemap -->
                     <line class="connector-line" x1="880" y1="150" x2="880" y2="190" aria-hidden="true"/>
                     <a href="sitemap.html" class="node-link" tabindex="0">
@@ -356,59 +365,70 @@
                         </g>
                     </a>
 
-                    <!-- Lower branch: Content Pages (direct from HOME) -->
-                    <line class="connector-line" x1="500" y1="120" x2="500" y2="310" aria-hidden="true"/>
-                    <line class="connector-line" x1="200" y1="310" x2="800" y2="310" aria-hidden="true"/>
+                    <!-- Content Pages Wrap-Around Connector -->
+                    <!-- Vertical line down from HOME -->
+                    <line class="connector-line" x1="500" y1="120" x2="500" y2="250" aria-hidden="true"/>
+                    
+                    <!-- Left side curve -->
+                    <line class="connector-line" x1="500" y1="250" x2="80" y2="250" aria-hidden="true"/>
+                    <line class="connector-line" x1="80" y1="250" x2="80" y2="310" aria-hidden="true"/>
+                    
+                    <!-- Right side curve -->
+                    <line class="connector-line" x1="500" y1="250" x2="920" y2="250" aria-hidden="true"/>
+                    <line class="connector-line" x1="920" y1="250" x2="920" y2="310" aria-hidden="true"/>
+                    
+                    <!-- Bottom horizontal line connecting left and right -->
+                    <line class="connector-line" x1="80" y1="310" x2="920" y2="310" aria-hidden="true"/>
 
-                    <!-- Content Pages -->
+                    <!-- Content Pages (connectors drop from bottom line) -->
                     <!-- Content 1 -->
-                    <line class="connector-line" x1="280" y1="310" x2="280" y2="350" aria-hidden="true"/>
+                    <line class="connector-line" x1="280" y1="310" x2="280" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent1.html" class="node-link" tabindex="0">
                         <g>
                             <title>Content Page 1 - Saving Coral Reefs</title>
-                            <rect class="node-rect" x="200" y="350" width="160" height="50" />
-                            <text class="node-text" x="280" y="377">CONTENT 1</text>
+                            <rect class="node-rect" x="200" y="360" width="160" height="50" />
+                            <text class="node-text" x="280" y="387">CONTENT 1</text>
                         </g>
                     </a>
 
                     <!-- Content 2 -->
-                    <line class="connector-line" x1="420" y1="310" x2="420" y2="350" aria-hidden="true"/>
+                    <line class="connector-line" x1="420" y1="310" x2="420" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent2.html" class="node-link" tabindex="0">
                         <g>
                             <title>Content Page 2 - Preventing Ocean Pollution</title>
-                            <rect class="node-rect" x="340" y="350" width="160" height="50" />
-                            <text class="node-text" x="420" y="377">CONTENT 2</text>
+                            <rect class="node-rect" x="340" y="360" width="160" height="50" />
+                            <text class="node-text" x="420" y="387">CONTENT 2</text>
                         </g>
                     </a>
 
                     <!-- Content 3 -->
-                    <line class="connector-line" x1="560" y1="310" x2="560" y2="350" aria-hidden="true"/>
+                    <line class="connector-line" x1="560" y1="310" x2="560" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent3.html" class="node-link" tabindex="0">
                         <g>
                             <title>Content Page 3 - Ocean Acidification Solutions</title>
-                            <rect class="node-rect" x="480" y="350" width="160" height="50" />
-                            <text class="node-text" x="560" y="377">CONTENT 3</text>
+                            <rect class="node-rect" x="480" y="360" width="160" height="50" />
+                            <text class="node-text" x="560" y="387">CONTENT 3</text>
                         </g>
                     </a>
 
                     <!-- Content 4 -->
-                    <line class="connector-line" x1="720" y1="310" x2="720" y2="350" aria-hidden="true"/>
+                    <line class="connector-line" x1="720" y1="310" x2="720" y2="360" aria-hidden="true"/>
                     <a href="contentPages/contentPageStudent4.html" class="node-link" tabindex="0">
                         <g>
                             <title>Content Page 4 - Marine Biodiversity</title>
-                            <rect class="node-rect" x="640" y="350" width="160" height="50" />
-                            <text class="node-text" x="720" y="377">CONTENT 4</text>
+                            <rect class="node-rect" x="640" y="360" width="160" height="50" />
+                            <text class="node-text" x="720" y="387">CONTENT 4</text>
                         </g>
                     </a>
 
                     <!-- Legend -->
-                    <text class="node-text" x="500" y="490" style="font-weight: 800; font-size: 14px; fill: #0160C9; text-anchor: middle;">Navigation Guide</text>
-                    <text class="node-text" x="500" y="520" style="font-size: 12px; fill: #666; text-anchor: middle;">Click any box to navigate • Tab to move between pages • Enter to activate</text>
+                    <text class="node-text" x="500" y="500" style="font-weight: 800; font-size: 14px; fill: #0160C9; text-anchor: middle;">Navigation Guide</text>
+                    <text class="node-text" x="500" y="530" style="font-size: 12px; fill: #666; text-anchor: middle;">Click any box to navigate • Tab to move between pages • Enter to activate</text>
                 </svg>
             </div>
 
             <div class="legend">
-                <p><strong>Website Structure Overview:</strong> This sitemap shows the hierarchy of the Life Below Water website, with Home at the root level, main pages (Gallery, Simulator, Feedback, Team, Sitemap) at the first level, and educational content pages at the second level, all directly accessible from the home page.</p>
+                <p><strong>Website Structure Overview:</strong> This sitemap shows the hierarchy of the Life Below Water website, with Home at the root level, main pages (Gallery, Simulator, Feedback, Team, User Profile, Sitemap) at the first level, and educational content pages accessible through a wrap-around connection pattern that avoids passing through main pages. All pages are fully interactive and accessible via keyboard navigation.</p>
             </div>
         </main>
 
@@ -416,6 +436,8 @@
         <footer>
             <p>&copy; 2024 Life Below Water. All rights reserved.</p>
             <p>Yoosuf Husain - 20244063</p>
+            <a href="page-editors/pageEditorStudent4.html">Page Editor</a>
+            <a href="validation/validationPageStudent4.html">Validation</a>
         </footer>
 
         <script>
