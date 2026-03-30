@@ -3,11 +3,106 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Life Below Water</title>
+        <title>Sitemap - Life Below Water</title>
         <link rel="stylesheet" href="stylings/globalStyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <style>
+            main {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+            .sitemap-title {
+                text-align: center;
+                color: #0160C9;
+                font-size: 2rem;
+                margin-bottom: 40px;
+                font-weight: 800;
+            }
+
+            .sitemap-container {
+                display: flex;
+                justify-content: center;
+                overflow-x: auto;
+                padding: 20px 0;
+            }
+
+            svg {
+                min-width: 100%;
+                height: auto;
+                max-width: 1000px;
+            }
+
+            /* SVG Styling */
+            .node-rect {
+                fill: #0160C9;
+                stroke: #0D85D8;
+                stroke-width: 2;
+                rx: 8;
+                ry: 8;
+                transition: all 0.3s ease;
+            }
+
+            .node-rect:hover,
+            .node-rect:focus {
+                fill: #0D85D8;
+                stroke: #3ACBE8;
+                stroke-width: 3;
+            }
+
+            .node-text {
+                fill: #ffffff;
+                font-size: 14px;
+                text-anchor: middle;
+                dominant-baseline: middle;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                pointer-events: none;
+            }
+
+            .node-link {
+                cursor: pointer;
+            }
+
+            .node-link:focus {
+                outline: 2px solid #3ACBE8;
+                outline-offset: 3px;
+            }
+
+            .connector-line {
+                stroke: #0160C9;
+                stroke-width: 2;
+                fill: none;
+            }
+
+            .legend {
+                text-align: center;
+                margin-top: 30px;
+                color: #666;
+                font-size: 0.9rem;
+            }
+
+            @media (max-width: 768px) {
+                .sitemap-title {
+                    font-size: 1.5rem;
+                }
+
+                .node-text {
+                    font-size: 12px;
+                }
+
+                .node-rect {
+                    stroke-width: 1.5;
+                }
+
+                .connector-line {
+                    stroke-width: 1.5;
+                }
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -16,7 +111,7 @@
                     <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
                 </svg>
             </a>
-            <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
+            <div class="logo-container">
                 <img src="images/logo.png" alt="Website Logo">
                 <h1 class="website-title">
                     <span class="life">LIFE</span>
@@ -25,7 +120,7 @@
                 </h1>
             </div>
             <nav>
-                <ul> <!-- this is the navigation bar that appears at the top of the page -->
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="simulator.html">Action Impact Simulator</a></li>
@@ -36,7 +131,7 @@
             </nav>
         </header>
 
-        <div class="sticky-nav"> <!-- this is the sticky navigation bar that appears when the user scrolls down the page -->
+        <div class="sticky-nav">
             <a href="userProfile.html" class="profile-btn profile-btn--sticky" title="User Profile">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
                     <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
@@ -45,8 +140,8 @@
             <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
             <h2 class="sticky-title">
                 <span class="life">LIFE</span>
-                <span class="below"> BELOW</span>
-                <span class="water"> WATER</span>
+                <span class="below">BELOW</span>
+                <span class="water">WATER</span>
             </h2>
             <nav>
                 <ul>
