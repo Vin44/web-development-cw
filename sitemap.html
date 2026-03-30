@@ -19,7 +19,6 @@
             <div class="logo-container"> <!-- this is the logo container that contains the logo and the website title, which is placed at the top left corner of the page -->
                 <img src="images/logo.png" alt="Website Logo">
                 <h1 class="website-title">
-                    <span class="op">OceanPulse:</span>
                     <span class="life">LIFE</span>
                     <span class="below">BELOW</span>
                     <span class="water">WATER</span>
@@ -45,7 +44,6 @@
             </a>
             <img src="images/logo.png" alt="sticky logo" class="sticky-logo">
             <h2 class="sticky-title">
-                <span class="op-span">OceanPulse:</span>
                 <span class="life">LIFE</span>
                 <span class="below"> BELOW</span>
                 <span class="water"> WATER</span>
@@ -58,86 +56,150 @@
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="teamPage.html">Our Team</a></li>
                 <li><a href="sitemap.html" class="active">Site Map</a></li>
-                </ul>
-            </nav>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <h2>Website Sitemap</h2>
+        <p>Below is the hierarchical structure of the Life Below Water website.</p>
+        
+        <div class="card sitemap-card">
+            <svg
+                class="sitemap-svg"
+                viewBox="0 0 1000 580"
+                role="img"
+                aria-labelledby="svgTitle svgDesc"
+            >
+                <title id="svgTitle">Life Below Water Website Sitemap</title>
+                <desc id="svgDesc">Hierarchical tree showing Home at the root with main pages and content pages.</desc>
+
+                <!-- Level 1: HOME (Root) -->
+                <a xlink:href="index.html">
+                    <rect x="400" y="10" width="200" height="50" rx="8" class="svg-node svg-home"/>
+                    <text x="500" y="40" class="svg-label">HOME</text>
+                </a>
+
+                <!-- Vertical line from HOME -->
+                <line x1="500" y1="60" x2="500" y2="90" class="svg-line"/>
+
+                <!-- Main branch line -->
+                <line x1="500" y1="90" x2="500" y2="110" class="svg-line"/>
+                <line x1="100" y1="110" x2="900" y2="110" class="svg-line"/>
+
+                <!-- Level 2: MAIN PAGES -->
+                <!-- SPLASH -->
+                <line x1="140" y1="110" x2="140" y2="140" class="svg-line"/>
+                <a xlink:href="splash.html">
+                    <rect x="50" y="140" width="180" height="45" rx="8" class="svg-node"/>
+                    <text x="140" y="168" class="svg-label">SPLASH</text>
+                </a>
+
+                <!-- GALLERY -->
+                <line x1="280" y1="110" x2="280" y2="140" class="svg-line"/>
+                <a xlink:href="gallery.html">
+                    <rect x="190" y="140" width="180" height="45" rx="8" class="svg-node"/>
+                    <text x="280" y="168" class="svg-label">GALLERY</text>
+                </a>
+
+                <!-- TEAM -->
+                <line x1="420" y1="110" x2="420" y2="140" class="svg-line"/>
+                <a xlink:href="teamPage.html">
+                    <rect x="330" y="140" width="180" height="45" rx="8" class="svg-node"/>
+                    <text x="420" y="168" class="svg-label">TEAM</text>
+                </a>
+
+                <!-- FEEDBACK -->
+                <line x1="560" y1="110" x2="560" y2="140" class="svg-line"/>
+                <a xlink:href="feedback.html">
+                    <rect x="470" y="140" width="180" height="45" rx="8" class="svg-node"/>
+                    <text x="560" y="168" class="svg-label">FEEDBACK</text>
+                </a>
+
+                <!-- SIMULATOR -->
+                <line x1="700" y1="110" x2="700" y2="140" class="svg-line"/>
+                <a xlink:href="simulator.html">
+                    <rect x="610" y="140" width="180" height="45" rx="8" class="svg-node"/>
+                    <text x="700" y="168" class="svg-label">SIMULATOR</text>
+                </a>
+
+                <!-- SITEMAP -->
+                <line x1="840" y1="110" x2="840" y2="140" class="svg-line"/>
+                <a xlink:href="sitemap.html">
+                    <rect x="750" y="140" width="180" height="45" rx="8" class="svg-node svg-current"/>
+                    <text x="840" y="168" class="svg-label">SITEMAP</text>
+                </a>
+
+                <!-- USER PROFILE -->
+                <line x1="900" y1="110" x2="900" y2="140" class="svg-line"/>
+                <a xlink:href="userProfile.html">
+                    <rect x="810" y="140" width="180" height="45" rx="8" class="svg-node"/>
+                    <text x="900" y="168" class="svg-label">PROFILE</text>
+                </a>
+
+                <!-- Level 2b: CONTENT PAGES GROUP -->
+                <!-- Connector from HOME to Content Pages -->
+                <line x1="500" y1="90" x2="500" y2="230" class="svg-line"/>
+                <line x1="500" y1="230" x2="500" y2="250" class="svg-line"/>
+
+                <!-- Content Pages header/box -->
+                <text x="500" y="235" class="svg-header">CONTENT PAGES</text>
+
+                <!-- Horizontal content pages line -->
+                <line x1="200" y1="250" x2="800" y2="250" class="svg-line"/>
+
+                <!-- CONTENT 1 -->
+                <line x1="260" y1="250" x2="260" y2="280" class="svg-line"/>
+                <a xlink:href="contentPages/contentPageStudent1.html">
+                    <rect x="170" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
+                    <text x="260" y="308" class="svg-label">CONTENT 1</text>
+                </a>
+
+                <!-- CONTENT 2 -->
+                <line x1="400" y1="250" x2="400" y2="280" class="svg-line"/>
+                <a xlink:href="contentPages/contentPageStudent2.html">
+                    <rect x="310" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
+                    <text x="400" y="308" class="svg-label">CONTENT 2</text>
+                </a>
+
+                <!-- CONTENT 3 -->
+                <line x1="540" y1="250" x2="540" y2="280" class="svg-line"/>
+                <a xlink:href="contentPages/contentPageStudent3.html">
+                    <rect x="450" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
+                    <text x="540" y="308" class="svg-label">CONTENT 3</text>
+                </a>
+
+                <!-- CONTENT 4 -->
+                <line x1="680" y1="250" x2="680" y2="280" class="svg-line"/>
+                <a xlink:href="contentPages/contentPageStudent4.html">
+                    <rect x="590" y="280" width="180" height="45" rx="8" class="svg-node svg-content"/>
+                    <text x="680" y="308" class="svg-label">CONTENT 4</text>
+                </a>
+
+            </svg>
         </div>
 
-        <main>
-            <!-- thopi huththala meke weda krnnone -->
-            <!-- git hub eken me code tika pull krganin mulinma -->
-            <!-- ita pacce ublge namin branches hadagena weda krhlla -->
-            <!-- main ekata kawadawath push krnna epa ehema krnnath ba mn hithe -->
-            <!-- ubl hadagatta branch eke task eken task ekata kadahan branches, remember 'ubalage branches walin kadaganne' -->
-            <!-- SARALAWAMA -> main branch eken kedila thiyenna oni branches hatharai  -->
-                <!-- main -> (vinindu, janindu, krishantha, yoosuf) -->
-                <!-- thama thamange branch walin task eken task ekata kadahan branches -->
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            <p>It is recognised that on occasion, illness or a personal crisis can mean that you fail to submit a piece of work 
-                on time. In such cases you must inform the Campus Office in writing on a mitigating circumstances form, giving 
-                the reason for your late or non-submission. You must provide relevant documentary evidence with the form. 
-                This information will be reported to the relevant Assessment Board that will decide whether the mark of zero 
-                shall stand. For more detailed information regarding University Assessment Regulations, please refer to the 
-                following website:
-            </p>
-            
-        </main>
+        <p class="sitemap-caption">
+            <strong>Figure:</strong> Life Below Water website hierarchical sitemap. Home is at the root level, main pages (Splash, Gallery, Team, Feedback, Simulator, Sitemap, Profile) at level 2, and content pages below.
+        </p>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Life Below Water. All rights reserved.</p>
-            <p>Vinindu Wickramasinghe - 20244059</p>
-            <a href="editor.html">Page Editor</a>
-            <a href="validation.html">Validation</a>
-        </footer>
+    <footer>
+        <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+        <p>Yoosuf Husain 20244063</p>
+        <a href="page-editors/pageEditorStudent4.html">Page Editor</a>
+        <a href="validation/validationPageStudent4.html">Validation</a>
+    </footer>
 
-
-        <!-- this is the JavaScript code that handles the functionality of the sticky navigation bar, which appears when the user scrolls down the page and disappears when the user scrolls back up to the top of the page -->
-        <script> 
-            const stickyNav = document.querySelector('.sticky-nav');
-            const header = document.querySelector('header');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > header.offsetHeight - 80) {
-                stickyNav.classList.add('visible');
-                } else {
-                stickyNav.classList.remove('visible');
-                }
-            });
-        </script>
-
-
-    </body>
+    <script>
+        var stickyNav = document.getElementById('stickyNav');
+        window.onscroll = function() {
+            if (window.pageYOffset > 400) {
+                stickyNav.className = 'sticky-nav visible';
+            } else {
+                stickyNav.className = 'sticky-nav';
+            }
+        };
+    </script>
+</body>
 </html>

@@ -1,0 +1,259 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Student 4</title>
+
+    <link rel="stylesheet" href="../stylings/globalStyle.css">
+
+    <!-- Page specific styling -->
+    <style>
+        .editor-section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            border-left: 5px solid #00b4d8;
+            padding-left: 10px;
+        }
+
+        .toc a {
+            display: block;
+            margin: 6px 0;
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background: #0077b6;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="Website Logo">
+        <h1 class="website-title">
+            <span class="life">LIFE</span>
+            <span class="below">BELOW</span>
+            <span class="water">WATER</span>
+        </h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../simulator.html">Action Impact Simulator</a></li>
+            <li><a href="../feedback.html">Feedback</a></li>
+            <li><a href="../teamPage.html">Our Team</a></li>
+            <li><a href="../sitemap.html">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sticky Nav -->
+<div class="sticky-nav">
+    <img src="../images/logo.png" class="sticky-logo">
+    <h2 class="sticky-title">
+        <span class="life">LIFE</span>
+        <span class="below"> BELOW</span>
+        <span class="water"> WATER</span>
+    </h2>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../simulator.html">Simulator</a></li>
+            <li><a href="../feedback.html">Feedback</a></li>
+            <li><a href="../teamPage.html">Team</a></li>
+        </ul>
+    </nav>
+</div>
+
+<main class="editor-section">
+
+    <!-- Student Details -->
+    <div class="card">
+        <h2>Student Details</h2>
+        <p><strong>Name:</strong> Yoosuf Husain</p>
+        <p><strong>ID:</strong> 20244063</p>
+        <p><strong>Role:</strong> User Profile, Sitemap, Content Page</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="card toc">
+        <h2>Contents</h2>
+        <a href="#splash">Splash Screen</a>
+        <a href="#simulator">Simulator</a>
+        <a href="#content">Content Page</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="#meetings">Meetings</a>
+    </div>
+
+    <!-- Splash -->
+    <div id="splash" class="card">
+        <h2>Splash Screen</h2>
+        <p>Designed as an engaging entry point with auto redirection.</p>
+        <ul>
+            <li>Meta refresh + JavaScript timer</li>
+            <li>CSS animations</li>
+            <li>Centered layout using Flexbox</li>
+        </ul>
+    </div>
+
+    <!-- Simulator -->
+    <div id="simulator" class="card">
+        <h2>Action Impact Simulator</h2>
+        <p>Interactive system to demonstrate environmental impact.</p>
+        <ul>
+            <li>Dynamic scoring using JavaScript</li>
+            <li>Event listeners for user actions</li>
+            <li>Visual feedback system</li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div id="content" class="card">
+        <h2>Content Page</h2>
+        <p>Structured content with sections and internal navigation.</p>
+        <ul>
+            <li>Anchor links navigation</li>
+            <li>Images + video</li>
+            <li>Sticky navigation</li>
+        </ul>
+    </div>
+
+    <!-- Challenges -->
+    <div id="challenges" class="card">
+        <h2>Challenges</h2>
+        <p>Resolved CSS conflicts and file path issues using browser dev tools.</p>
+    </div>
+
+    <!-- Accessibility -->
+    <div id="accessibility" class="card">
+        <h2>Accessibility</h2>
+        <p>Used semantic HTML, alt text, and readable structure.</p>
+    </div>
+
+    <!-- Meetings -->
+    <div id="meetings" class="card">
+        <h2>Meetings</h2>
+        <table>
+            <tr>
+                <th>Meeting</th>
+                <th>Date & Time</th>
+                <th>Format</th>
+                <th>Objective</th>
+                <th>Attended</th>
+                <th>My Contribution</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>02/22/2026</td>
+                <td>Face to face</td>
+                <td>All group members brainstormed and agreed to choose the topic "Life Under Water".</td>
+                <td>Yes</td>
+                <td>Suggested various topics with their pros and cons.Finally agreed to go on with the chosen topic.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>03/07/2026</td>
+                <td>Face to face</td>
+                <td>Researched on the selected topic and distributed the tasks among group members.</td>
+                <td>Yes</td>
+                <td>Contributed to topic research and task allocation.Agreed to play the student 2 role.</td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td>03/08/2026</td>
+                <td>Online</td>
+                <td>Created a github repository and made branches for each member to upload their contribution.</td>
+                <td>Yes</td>
+                <td>Created a separate branch for myself and created a local repository.</td>
+            </tr>
+             <tr>
+                <td>4</td>
+                <td>03/15/2026</td>
+                <td>Online</td>
+                <td>Discussed each member's contribution on their specific tasks and progress.</td>
+                <td>No</td>
+                <td>Discussed team progress and individual tasks.</td>
+            </tr>
+             <tr>
+                <td>5</td>
+                <td>03/27/2026</td>
+                <td>Hybrid</td>
+                <td>Discussed and worked on common tasks in the selected topic.</td>
+                <td>Yes</td>
+                <td>Collaborated on shared tasks.Created common pages by discussing with everyone.</td>
+            </tr>
+             <tr>
+                <td>6</td>
+                <td>03/29/2026</td>
+                <td>Online</td>
+                <td>Merged all finalized contribution of each member and walked through the entire project.</td>
+                <td>Yes</td>
+                <td>Fine tuned the final version of the project.Fixed small issues found.</td>
+            </tr>
+        </table>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Life Below Water</p>
+    <p>Yoosuf Husain 20244063</p>
+</footer>
+
+<!-- Sticky nav script -->
+<script>
+    const stickyNav = document.querySelector('.sticky-nav');
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > header.offsetHeight - 80) {
+            stickyNav.classList.add('visible');
+        } else {
+            stickyNav.classList.remove('visible');
+        }
+    });
+</script>
+
+</body>
+</html>
+```
