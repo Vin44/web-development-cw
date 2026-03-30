@@ -5,10 +5,6 @@
    ============================================================ */
 
 
-/* -----------------------------------------------
-   SHARED SECTION HELPERS
------------------------------------------------ */
-
 /* page title at the top of <main> */
 .fb-page-title {
     font-family: 'Inter', sans-serif;
@@ -29,16 +25,6 @@
     line-height: 1.7;
 }
 
-/* shared heading style used across all three sections */
-.section-heading {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgba(110, 156, 248, 0.4);
-}
 
 
 /* -----------------------------------------------
@@ -155,18 +141,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* icon/thumbnail area */
-.prog-card-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 14px auto;
-    background: rgba(1, 18, 70, 0.4);
-    border-radius: 50%;
-    border: 2px solid rgba(110, 156, 248, 0.4);
-}
 
 .prog-card {
     display: flex;
@@ -780,18 +754,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* icon/thumbnail area */
-.prog-card-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 14px auto;
-    background: rgba(1, 18, 70, 0.4);
-    border-radius: 50%;
-    border: 2px solid rgba(110, 156, 248, 0.4);
-}
+
 
 .prog-card-title {
     font-family: 'Inter', sans-serif;
